@@ -1,6 +1,6 @@
 ---
 layout: home
-title: About
+title: About Me
 ---
 
 {: .display-5 .fw-semibold .mb-3 }
