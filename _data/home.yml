@@ -1,19 +1,7 @@
 icons:
-  - title: Google Scholar
-    id: google-scholar
-    url: https://scholar.google.com/citations?user=i_sx6QMAAAAJ
   - title: ORCID
     id: orcid
-    url: https://orcid.org/0000-0001-9676-7422
-  - title: Scopus
-    id: scopus
-    url: https://www.scopus.com/authid/detail.uri?authorId=56123810600
-  - title: Web of Science
-    id: clarivate
-    url: https://www.webofscience.com/wos/author/record/ABH-6674-2020
+    url: https://orcid.org/0009-0008-6145-3587
   - title: GitHub
     id: github
-    url: https://github.com/piazzai
-  - title: Lichess
-    id: lichess
-    url: https://lichess.org/@/piazzai
+    url: https://github.com/betinaschilling
