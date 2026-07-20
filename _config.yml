@@ -1,5 +1,5 @@
-title: Cheila Santos
-description: Cientista de Dados
+title: ComuniDados
+description: Revista-laboratório independente sobre dados, estatística, inteligência artificial, comportamento, negócios e sociedade
 url: https://betinaschilling.github.io
 author: Cheila Betina Schilling dos Santos
 permalink: pretty
@@ -25,11 +25,13 @@ paginate: 5
 markdown: kramdown
 
 navigation:
-  - title: "Sobre"
-    url: "/about/"
-  - title: "CV"
-    url: "/cv/"
-  - title: "Portfólio"
-    url: "/portfolio/"
+  - title: "Início"
+    url: "/"
   - title: "Artigos"
-    url: "/articles/"
+    url: "/artigos/"
+  - title: "Laboratório"
+    url: "/laboratorio/"
+  - title: "Manifesto"
+    url: "/manifesto/"
+  - title: "Sobre mim"
+    url: "/sobre-mim/"
