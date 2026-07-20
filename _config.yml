@@ -20,3 +20,16 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+paginate: 5
+markdown: kramdown
+
+navigation:
+  - title: "Sobre"
+    url: "/about/"
+  - title: "CV"
+    url: "/cv/"
+  - title: "Portfólio"
+    url: "/portfolio/"
+  - title: "Artigos"
+    url: "/articles/"
