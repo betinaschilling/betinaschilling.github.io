@@ -5,12 +5,17 @@ body {
 }
 
 body {
-    text-shadow: 0 .05rem .1rem rgba(black, .5);
-    box-shadow: inset 0 0 5rem rgba(black, .5);
+    color: var(--bs-body-color);
+    background:
+        radial-gradient(circle at top left, rgba(124, 34, 24, .08), transparent 26%),
+        radial-gradient(circle at 80% 10%, rgba(241, 224, 147, .45), transparent 20%),
+        linear-gradient(180deg, #f7efd9 0%, #efe0bd 100%);
+    min-height: 100vh;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 svg {
@@ -19,4 +24,18 @@ svg {
     &:hover {
         color: var(--bs-tertiary-color);
     }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--bs-headings-font-family);
+    letter-spacing: -0.02em;
+    line-height: .98;
+}
+
+p,
+li {
+    line-height: 1.7;
 }

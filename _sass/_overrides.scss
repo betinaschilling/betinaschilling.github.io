@@ -1,19 +1,40 @@
 * {
-    --bs-body-color: var(--oc-gray-0);
-    --bs-body-color-rgb: var(--oc-gray-0-rgb);
-    --bs-body-bg: var(--oc-gray-9);
-    --bs-body-bg-rgb: var(--oc-gray-9-rgb);
-    --bs-secondary-color: var(--oc-gray-6);
-    --bs-secondary-color-rgb: var(--oc-gray-6-rgb);
-    --bs-tertiary-color: var(--oc-gray-4);
-    --bs-tertiary-color-rgb: var(--oc-gray-4-rgb);
-    --bs-link-color: var(--oc-blue-3);
-    --bs-link-color-rgb: var(--oc-blue-3-rgb);
-    --bs-link-hover-color: var(--oc-blue-4);
-    --bs-link-hover-color-rgb: var(--oc-blue-4-rgb);
-    --bs-nav-link-color: var(--oc-gray-6);
-    --bs-nav-link-color-rgb: var(--oc-gray-6-rgb);
+    --bs-body-color: #211914;
+    --bs-body-color-rgb: 33, 25, 20;
+    --bs-body-bg: #f2e6c7;
+    --bs-body-bg-rgb: 242, 230, 199;
+    --bs-secondary-color: #6f5a49;
+    --bs-secondary-color-rgb: 111, 90, 73;
+    --bs-tertiary-color: #8d7a66;
+    --bs-tertiary-color-rgb: 141, 122, 102;
+    --bs-link-color: #7c2218;
+    --bs-link-color-rgb: 124, 34, 24;
+    --bs-link-hover-color: #a53d2e;
+    --bs-link-hover-color-rgb: 165, 61, 46;
+    --bs-nav-link-color: #4d4136;
+    --bs-nav-link-color-rgb: 77, 65, 54;
     --bs-body-font-family: "Fira Sans", var(--bs-font-sans-serif);
-    --bs-nav-link-hover-color: var(--bs-secondary-color);
-    --bs-nav-link-hover-color-rgb: var(--bs-secondary-color-rgb);
+    --bs-headings-font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    --bs-nav-link-hover-color: var(--bs-link-hover-color);
+    --bs-nav-link-hover-color-rgb: var(--bs-link-hover-color-rgb);
+}
+
+.btn-primary {
+    --bs-btn-color: #f8f0e1;
+    --bs-btn-bg: #7c2218;
+    --bs-btn-border-color: #7c2218;
+    --bs-btn-hover-bg: #992a1e;
+    --bs-btn-hover-border-color: #992a1e;
+    --bs-btn-focus-shadow-rgb: 124, 34, 24;
+}
+
+.btn-outline-dark {
+    --bs-btn-color: #211914;
+    --bs-btn-border-color: rgba(33, 25, 20, .35);
+    --bs-btn-hover-bg: #211914;
+    --bs-btn-hover-border-color: #211914;
+}
+
+.text-muted {
+    color: var(--bs-secondary-color) !important;
 }
