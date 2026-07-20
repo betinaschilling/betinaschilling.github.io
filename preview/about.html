@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><h1>About</h1></header>
+<main>
+<div id="content"></div>
+</main>
+<footer style="margin-top:2rem;color:#666">Preview gerado localmente</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+const md = `
+
+## Sobre
+
+Escreva aqui um parágrafo sobre você: formação, interesses, áreas de atuação e um resumo profissional.
+
+### Contato
+
+- Email: seu.email@exemplo.com
+- LinkedIn / GitHub / Twitter: links
+
+Substitua estes textos pelos seus dados reais.
+`;
+document.getElementById('content').innerHTML = marked.parse(md);
+</script>
+</body>
+</html>

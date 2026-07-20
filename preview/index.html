@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Index</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><h1>Index</h1></header>
+<main>
+<div id="content"></div>
+</main>
+<footer style="margin-top:2rem;color:#666">Preview gerado localmente</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+const md = `
+
+{: .display-5 .fw-semibold .mb-3 }
+# Alou! :)
+
+{: .fs-5 .mb-3 }
+Sou cientista de dados, com interesse em problemas relacionados à organização, estratégia e tomada de decisão. 
+Aspirante no Mestrado de Estatística da UFRGS.
+
+{: .fs-5 .mb-4 }
+Você pode me encontrar em [betina.ssc@gmail.com](mailto:betina.ssc@gmail.com).
+`;
+document.getElementById('content').innerHTML = marked.parse(md);
+</script>
+</body>
+</html>
