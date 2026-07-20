@@ -1,6 +1,10 @@
-window.onload = function () {
-    Particles.init({
-        selector: '.background',
-        color: ['#f8f9fa', '#ced4da', '#868e96', '#74c0fc', '#4dabf7']
-    });
-};
+(() => {
+  const button = document.querySelector('.menu-button');
+  const nav = document.querySelector('.site-header nav');
+  if (!button || !nav) return;
+  button.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('open', !open);
+  });
+})();

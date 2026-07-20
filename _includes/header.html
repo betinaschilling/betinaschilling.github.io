@@ -1,14 +1,9 @@
-<header class="mb-auto">
-    <div class="brand-lockup mb-4 mb-md-0">
-        <a class="brand-mark text-decoration-none" href="{{ '/' | relative_url }}" aria-label="ComuniDados">
-            <span class="brand-kicker">Revista-laboratório</span>
-            <span class="brand-name">ComuniDados</span>
-        </a>
-    </div>
-    <nav class="nav site-nav" aria-label="Navegação principal">
-        {% for link in site.navigation %}
-        {% assign is_active = link.url == page.url %}
-        <a class="nav-link{% if is_active %} active{% endif %}"{% if is_active %} aria-current="page"{% endif %} href="{{ link.url | relative_url }}">{{ link.title }}</a>
-        {% endfor %}
-    </nav>
+<header class="site-header">
+  <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="ComuniDados — início">Comuni<span>Dados</span></a>
+  <nav aria-label="Navegação principal">
+    {% for item in site.navigation %}
+      <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+    {% endfor %}
+  </nav>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
 </header>

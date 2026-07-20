@@ -1,17 +1,26 @@
 ---
 layout: page
 title: "Manifesto"
+description: "Por que compreender dados também é uma forma de participar do mundo."
 permalink: /manifesto/
 ---
 
-<section class="paper-card p-4 mb-4">
-  <p class="section-label mb-3">Princípio central</p>
-  <p class="pull-quote mb-0">Democratizar dados não é apenas entregar números. É distribuir capacidade de interpretação.</p>
-</section>
+## Dados não falam por si.
 
-<section class="paper-card p-4">
-  <p class="section-label mb-3">Texto de posição</p>
-  <p>ComuniDados existe para aproximar dados, estatística e inteligência artificial de perguntas concretas da vida social e dos negócios. A publicação rejeita tanto o simplismo quanto o espetáculo técnico.</p>
-  <p>O compromisso editorial é com contexto, transparência metodológica, leitura crítica e clareza pública. Dados sem interpretação são só inventário; interpretação sem método vira opinião.</p>
-  <p class="mb-0">A ambição aqui é construir um espaço intelectual independente, legível e útil, onde cada peça contribua para ampliar capacidade de análise, e não só para acumular volume de informação.</p>
-</section>
+Alguém escolhe o que medir, como classificar, o que excluir e qual história contar. Todo banco de dados contém decisões anteriores ao primeiro gráfico. Todo modelo carrega hipóteses. Toda métrica ilumina uma parte da realidade enquanto deixa outra na sombra.
+
+## Acesso não é compreensão.
+
+Democratizar dados não significa apenas distribuir dashboards ou permitir que mais pessoas consultem uma tabela. Significa criar condições para que elas entendam como os dados foram produzidos, reconheçam seus limites, questionem os métodos e participem das decisões construídas a partir deles.
+
+> Democratizar dados não é entregar números. É distribuir capacidade de interpretação.
+
+## Rigor não precisa ser inacessível.
+
+O ComuniDados existe para tornar métodos complexos compreensíveis sem torná-los rasos. Para aproximar estatística, tecnologia, negócios e vida social. Para documentar não apenas resultados, mas perguntas, escolhas, erros, limitações e incertezas.
+
+## Conhecimento também deve circular.
+
+Projetos serão apresentados como investigações abertas. Artigos terão referências, contexto e caminhos para reprodução. Conceitos técnicos serão explicados sem presumir que o leitor já pertença ao campo.
+
+Porque acessar é apenas o começo. Participar é conseguir compreender, questionar e decidir.

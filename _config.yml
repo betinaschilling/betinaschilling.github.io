@@ -1,7 +1,9 @@
 title: ComuniDados
-description: Revista-laboratório independente sobre dados, estatística, inteligência artificial, comportamento, negócios e sociedade
+description: "Compreender dados é uma forma de participar."
 url: https://betinaschilling.github.io
 author: Cheila Betina Schilling dos Santos
+email: c.santos.research@gmail.com
+lang: pt-BR
 permalink: pretty
 
 exclude:
@@ -9,6 +11,7 @@ exclude:
   - LICENSE
   - README.md
   - vendor/
+  - preview/
   - cv.aux
   - cv.fdb_latexmk
   - cv.fls
@@ -21,7 +24,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-paginate: 5
 markdown: kramdown
 
 navigation:
@@ -34,4 +36,4 @@ navigation:
   - title: "Manifesto"
     url: "/manifesto/"
   - title: "Sobre mim"
-    url: "/sobre-mim/"
+    url: "/sobre/"

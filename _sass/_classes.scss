@@ -1,168 +1,31 @@
-.page-shell {
-    max-width: 76rem;
-    position: relative;
-    gap: 2.5rem;
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.brand-lockup {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.brand-mark {
-    display: inline-flex;
-    flex-direction: column;
-    gap: .25rem;
-}
-
-.brand-kicker,
-.meta-line,
-.section-label {
-    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-}
-
-.brand-kicker,
-.section-label {
-    font-size: .72rem;
-    color: var(--bs-secondary-color);
-}
-
-.brand-name {
-    font-family: var(--bs-headings-font-family);
-    font-size: clamp(2rem, 6vw, 4.75rem);
-    line-height: .9;
-}
-
-.site-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .75rem 1.25rem;
-    padding-top: .95rem;
-    border-top: 1px solid rgba(33, 25, 20, .16);
+.cover-container {
+    max-width: 42em;
 }
 
 .nav .nav-link {
-    padding: 0;
-    border-bottom: .18rem solid transparent;
-    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-size: .85rem;
+    border-bottom: .25rem solid transparent;
 
     &:hover,
     &:focus {
-        border-bottom-color: currentColor !important;
+        border-bottom-color: var(--bs-nav-link-hover-color) !important;
+    }
+
+    &+.nav-link {
+        margin-left: 1rem;
     }
 
     &.active {
         color: var(--bs-body-color);
         border-bottom-color: var(--bs-body-color);
-    }
-}
-
-.paper-card,
-.feature-card,
-.lab-item,
-.bio-card,
-.note-callout {
-    background: rgba(255, 252, 246, .72);
-    border: 1px solid rgba(33, 25, 20, .16);
-    box-shadow: 0 18px 40px rgba(33, 25, 20, .06);
-    backdrop-filter: blur(3px);
-}
-
-.feature-card,
-.lab-item,
-.bio-card,
-.note-callout {
-    padding: 1.25rem;
-}
-
-.feature-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.feature-card::after {
-    content: "";
-    position: absolute;
-    inset: auto -10% -35% auto;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(124, 34, 24, .18), transparent 65%);
-    pointer-events: none;
-}
-
-.lead-slab {
-    max-width: 42rem;
-    font-size: clamp(1.1rem, 2.3vw, 1.45rem);
-}
-
-.pull-quote {
-    font-family: var(--bs-headings-font-family);
-    font-size: clamp(1.35rem, 3vw, 2rem);
-    line-height: 1.2;
-}
-
-.article-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.article-list li + li {
-    margin-top: .9rem;
-}
-
-.article-link {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1rem;
-    padding: .95rem 0;
-    border-bottom: 1px solid rgba(33, 25, 20, .12);
-}
-
-.article-link strong {
-    font-family: var(--bs-headings-font-family);
-    font-size: 1.18rem;
-}
-
-.lab-grid,
-.card-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-}
-
-.tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .4rem;
-    padding: 0;
-    list-style: none;
-}
-
-.tag-list li {
-    border: 1px solid rgba(33, 25, 20, .16);
-    border-radius: 999px;
-    padding: .25rem .65rem;
-    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    font-size: .78rem;
-}
-
-@media (max-width: 767.98px) {
-    .page-shell {
-        padding-inline: 1rem !important;
-        gap: 1.75rem;
-    }
-
-    .article-link {
-        grid-template-columns: 1fr;
     }
 }
