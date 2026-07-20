@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articles</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><h1>Articles</h1></header>
+<main>
+<div id="content"></div>
+</main>
+<footer style="margin-top:2rem;color:#666">Preview gerado localmente</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+const md = `
+
+## Artigos
+
+Lista de posts publicados:
+
+<ul>
+{% raw %}{% for post in site.posts %}{% endraw %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ "{{ post.date | date: "%Y-%m-%d" }}" }}</li>
+{% raw %}{% endfor %}{% endraw %}
+</ul>
+
+> Observação: crie posts em \`_posts/\` com a convenção \`YYYY-MM-DD-titulo.md\`.
+`;
+document.getElementById('content').innerHTML = marked.parse(md);
+</script>
+</body>
+</html>
