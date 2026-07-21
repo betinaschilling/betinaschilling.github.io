@@ -1,17 +1,19 @@
 ---
 layout: page
 title: "Artigos"
-permalink: /articles/
+description: "Métodos, investigações e ensaios sobre dados, inteligência artificial e sociedade."
+permalink: /artigos/
 ---
 
-## Artigos
-
-Lista de posts publicados:
-
-<ul>
-{% raw %}{% for post in site.posts %}{% endraw %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> — {{ "{{ post.date | date: "%Y-%m-%d" }}" }}</li>
-{% raw %}{% endfor %}{% endraw %}
-</ul>
-
-> Observação: crie posts em `_posts/` com a convenção `YYYY-MM-DD-titulo.md`.
+<div class="article-index">
+{% for post in site.posts %}
+  <article>
+    <p class="meta">{{ post.category | default: 'ARTIGO' }} · {{ post.date | date: '%d.%m.%Y' }} · {{ post.read_time | default: '8 min' }}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+    <a class="read-link" href="{{ post.url | relative_url }}">Ler artigo →</a>
+  </article>
+{% else %}
+  <p>Os primeiros artigos estão sendo preparados.</p>
+{% endfor %}
+</div>

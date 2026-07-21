@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-
+<!doctype html>
+<html lang="pt-BR">
 {% include head.html %}
-
-<body class="d-flex h-100 text-center">
-    {% include svg.html %}
-    {{ content }}
-    <script src="{{ 'assets/js/bootstrap.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/particles.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
+<body id="topo">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  {% include header.html %}
+  <main id="conteudo">{{ content }}</main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
-
 </html>

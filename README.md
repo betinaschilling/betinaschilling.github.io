@@ -1,5 +1,48 @@
-# betinaschilling.github.io
+# ComuniDados
 
-Este repositório contém os arquivos-fonte do meu site pessoal, construído com [Bootstrap](https://getbootstrap.com/), a paleta [Open Color](https://yeun.github.io/open-color/) e a fonte [Fira Sans](https://mozilla.github.io/Fira/). O layout é baseado no tema [Cover](https://getbootstrap.com/docs/5.3/examples/cover/), também do Bootstrap. Utilizo este site para centralizar meus perfis online, hospedar meu currículo e, ocasionalmente, compartilhar materiais de cursos.
+Site pessoal e publicação editorial de Cheila Betina, construído com Jekyll e publicado no GitHub Pages.
 
-Por ter sido incluído em uma rede de forks, este repositório foi adicionado ao snapshot do GitHub de 2020 para o programa [Arctic Code Vault](https://archiveprogram.github.com/arctic-vault). Embora seja interessante saber que esta descrição será preservada, peço desculpas aos arqueólogos do futuro pela eventual perda de tempo e espaço.
+> Compreender dados é uma forma de participar.
+
+## Estrutura
+
+- `/` — página inicial
+- `/artigos/` — índice de publicações
+- `/laboratorio/` — projetos e investigações
+- `/manifesto/` — princípios editoriais
+- `/sobre/` — trajetória profissional e acadêmica
+- `/cv/` — currículo resumido e PDF
+
+## Publicar um novo artigo
+
+Crie um arquivo em `_posts` com o padrão `AAAA-MM-DD-titulo.md`:
+
+```yaml
+---
+layout: post
+title: "Título do artigo"
+description: "Resumo para mecanismos de busca."
+date: 2026-07-20 12:00:00 -0300
+category: Método
+read_time: 8 min
+---
+
+Texto do artigo em Markdown.
+```
+
+## Executar localmente
+
+Requisitos: Ruby e Bundler.
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Acesse `http://localhost:4000`.
+
+## Publicação
+
+O GitHub Pages publica o conteúdo do branch configurado no repositório. Antes de enviar alterações, execute `bundle exec jekyll build`.
+
+Revise os textos marcados como provisórios antes da publicação definitiva.

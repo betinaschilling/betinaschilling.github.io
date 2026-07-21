@@ -1,18 +1,57 @@
 ---
-layout: page
+layout: default
 ---
+<section class="hero">
+  <aside class="folio"><span>CADERNO 01</span><b>01</b></aside>
+  <div class="hero-copy">
+    <p class="eyebrow">Dossiê de abertura —</p>
+    <h1>Compreender<br>dados é uma forma<br>de <em>participar.</em></h1>
+    <p class="hero-deck">Uma publicação independente sobre dados,<br>inteligência artificial e sociedade.</p>
+    <a class="button" href="{{ '/artigos/' | relative_url }}">Comece por aqui <span>→</span></a>
+  </div>
+  <div class="hero-visual" aria-label="Visualização editorial sobre dados e interpretação">
+    <div class="note">DADOS NÃO FALAM.<br>SÃO INTERPRETADOS.<br>E TODA INTERPRETAÇÃO<br>É UMA ESCOLHA.</div>
+    <span class="annotation annotation-a">contexto<br>muda tudo ↙</span>
+    <span class="annotation annotation-b">participação<br>é método ←</span>
+    <div class="chart"><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 500 180" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,170 70,135 140,95 210,120 280,68 350,110 420,62 500,88" /></svg></div>
+  </div>
+</section>
 
-<img src="{{ 'assets/img/profile.png' | relative_url }}" class="mx-auto my-5 rounded-circle w-50" alt="{{ site.author }}" loading="lazy" />
-{{ content }}
-<ul class="nav mb-5 justify-content-center list-unstyled">
-    {% for icon in site.data.home.icons %}
-    <li class="mx-2">
-        <a class="icon-link" href="{{ icon.url }}">
-            <svg width="36" height="36" fill="currentColor">
-                <title>{{ icon.title }}</title>
-                <use xlink:href="#{{ icon.id }}" />
-            </svg>
-        </a>
-    </li>
+<section class="home-section publications">
+  <div class="section-label"><span>PUBLICAÇÕES RECENTES</span><a href="{{ '/artigos/' | relative_url }}">Ver todas ↗</a></div>
+  <div class="post-grid">
+    {% assign recent_posts = site.posts | slice: 0, 3 %}
+    {% for post in recent_posts %}
+    <article class="post-card {% if forloop.first %}featured{% endif %}">
+      {% if forloop.first %}<div class="abstract-art" aria-hidden="true"><i></i><b></b><span></span></div>{% endif %}
+      <div class="post-body">
+        <p class="meta">{{ post.category | default: 'Artigo' }} · {{ post.date | date: '%d.%m.%Y' }} · {{ post.read_time | default: '8 min' }}</p>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        <a class="read-link" href="{{ post.url | relative_url }}">Ler artigo →</a>
+      </div>
+    </article>
+    {% else %}
+    <article class="post-card featured placeholder"><div class="abstract-art"><i></i><b></b></div><div class="post-body"><p class="meta">ARTIGO · EM BREVE</p><h2>O que os dados omitem — e por que isso importa</h2><p>Sobre ausências, vieses e os limites do que os números conseguem dizer.</p></div></article>
     {% endfor %}
-</ul>
+  </div>
+</section>
+
+<section class="home-section lab-preview">
+  <div class="section-intro"><p class="eyebrow">Laboratório aberto —</p><h2>Projetos como<br><em>investigações.</em></h2><p>Aqui, o resultado não aparece sozinho. Cada projeto abre a pergunta, o método, as limitações e aquilo que muda na decisão.</p></div>
+  <div class="investigation-list">
+    <article><b>01</b><div><p class="meta">SÉRIES TEMPORAIS · VAREJO</p><h3>Clima e comportamento de compra</h3><p>Temperatura, chuva, faturamento e volume em um estudo causal e preditivo.</p><span>CATBOOST · SHAP · ECONOMETRIA</span></div></article>
+    <article><b>02</b><div><p class="meta">FORECAST · PESQUISA APLICADA</p><h3>Um futuro, centenas de lojas</h3><p>Previsão diária e reconciliação entre companhia e operações locais.</p><span>TIMESFM · CHRONOS · HIERÁRQUICO</span></div></article>
+    <a class="button dark" href="{{ '/laboratorio/' | relative_url }}">Abrir laboratório →</a>
+  </div>
+</section>
+
+<section class="manifesto-teaser">
+  <div><span>MANIFESTO / 01</span><h2>Dados não deveriam ser privilégio de quem sabe programar.</h2></div>
+  <div><p class="lead">Democratizar dados não é entregar números. É distribuir capacidade de interpretação.</p><p>O ComuniDados existe para tornar escolhas metodológicas visíveis e métodos complexos compreensíveis sem torná-los rasos.</p><a href="{{ '/manifesto/' | relative_url }}">Ler o manifesto →</a></div>
+</section>
+
+<section class="author-teaser">
+  <div class="author-mark">CB</div>
+  <div><p class="eyebrow">Quem escreve —</p><h2>Entre estatística,<br>tecnologia e <em>vida social.</em></h2><p>Sou Cheila, cientista e engenheira de dados. Este é meu arquivo público de investigações, aprendizados e perguntas em construção.</p><a href="{{ '/sobre/' | relative_url }}">Sobre mim →</a></div>
+</section>

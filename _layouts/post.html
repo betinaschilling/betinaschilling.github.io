@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="page-shell post-shell">
+  <header class="page-header">
+    <p class="eyebrow">{{ page.category | default: 'Artigo' }} · {{ page.date | date: '%d.%m.%Y' }} · {{ page.read_time | default: '8 min' }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="page-description">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+  <nav class="post-navigation" aria-label="Navegação entre artigos">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% endif %}
+    <a href="{{ '/artigos/' | relative_url }}">Todos os artigos</a>
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>{% endif %}
+  </nav>
+</article>

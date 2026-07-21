@@ -1,15 +1,34 @@
 ---
 layout: page
-title: "CV"
+title: "Currículo"
+description: "Experiência, formação e competências profissionais."
 permalink: /cv/
 ---
 
-## Curriculum Vitae
+[Baixar currículo em PDF]({{ '/assets/cv.pdf' | relative_url }}){: .button }
 
-Baixe o seu CV aqui (adicione um PDF em assets/ ou no repositório):
+## Resumo
 
-- [Download do meu CV](/assets/cv.pdf){: .btn }
+Cientista e engenheira de dados com experiência em forecast, séries temporais, machine learning aplicado ao varejo, engenharia de dados e construção de produtos analíticos.
 
-> Dica: substitua /assets/cv.pdf pelo caminho real do seu arquivo de CV.
+## Experiência
 
-Inclua também uma seção com experiência, educação e habilidades conforme necessário.
+- **Lojas Renner — Cientista de Dados, Forecast** · 2025 — atual
+- **Grendene — Senior Data Analyst / Data Engineer** · 2024 — 2025
+- **Portobello Shop — Analytics Engineer** · 2022 — 2024
+- **Arezzo&Co — Analista de Dados** · 2017 — 2022
+- **Getnet — Analista de Planejamento** · 2010 — 2015
+
+## Formação
+
+- Pós-graduação em Data Analytics — FIAP
+- Pós-graduação em Machine Learning — FCS
+- Graduação em Processos Gerenciais — UNINTER
+
+## Tecnologias e métodos
+
+Python, SQL, R, Spark, PySpark, Databricks, GCP, BigQuery, Airflow, CatBoost, LightGBM, XGBoost, Prophet, ARIMA, ETS, Chronos, TimesFM, previsão hierárquica, inferência causal e validação temporal.
+
+## Contato
+
+[c.santos.research@gmail.com](mailto:c.santos.research@gmail.com)

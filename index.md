@@ -1,14 +1,5 @@
 ---
 layout: home
-title: About Me
+title: ComuniDados
+description: "Compreender dados é uma forma de participar."
 ---
-
-{: .display-5 .fw-semibold .mb-3 }
-# Alou! :)
-
-{: .fs-5 .mb-3 }
-Sou cientista de dados, com interesse em problemas relacionados à organização, estratégia e tomada de decisão. 
-Aspirante no Mestrado de Estatística da UFRGS.
-
-{: .fs-5 .mb-4 }
-Você pode me encontrar em [betina.ssc@gmail.com](mailto:betina.ssc@gmail.com).
