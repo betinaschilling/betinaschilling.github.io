@@ -12,14 +12,6 @@ exclude:
   - README.md
   - vendor/
   - preview/
-  - cv.aux
-  - cv.fdb_latexmk
-  - cv.fls
-  - cv.log
-  - cv.out
-  - cv.synctex.gz
-  - cv.tex
-
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -29,11 +21,13 @@ markdown: kramdown
 navigation:
   - title: "Início"
     url: "/"
+  - title: "Dossiês"
+    url: "/dossies/"
   - title: "Artigos"
     url: "/artigos/"
-  - title: "Laboratório"
-    url: "/laboratorio/"
+  - title: "Investigações"
+    url: "/investigacoes/"
   - title: "Manifesto"
     url: "/manifesto/"
-  - title: "Sobre mim"
+  - title: "Sobre"
     url: "/sobre/"

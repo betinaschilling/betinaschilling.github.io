@@ -8,10 +8,11 @@ Site pessoal e publicação editorial de Cheila Betina, construído com Jekyll e
 
 - `/` — página inicial
 - `/artigos/` — índice de publicações
-- `/laboratorio/` — projetos e investigações
+- `/dossies/` — linhas de investigação que surgirão com o conteúdo
+- `/investigacoes/` — ponte entre perguntas públicas e cadernos técnicos
 - `/manifesto/` — princípios editoriais
 - `/sobre/` — trajetória profissional e acadêmica
-- `/cv/` — currículo resumido e PDF
+- `/curriculo/` — página canônica do currículo
 
 ## Publicar um novo artigo
 
@@ -45,4 +46,19 @@ Acesse `http://localhost:4000`.
 
 O GitHub Pages publica o conteúdo do branch configurado no repositório. Antes de enviar alterações, execute `bundle exec jekyll build`.
 
-Revise os textos marcados como provisórios antes da publicação definitiva.
+## Publicar o currículo
+
+O único caminho aceito para o PDF é:
+
+```text
+assets/documents/curriculo-cheila-betina-schilling.pdf
+```
+
+Antes da publicação:
+
+1. confirme que o arquivo é um PDF válido;
+2. revise telefone, endereço e demais dados pessoais;
+3. atualize data, tamanho e status em `curriculo.md`;
+4. habilite os links de visualização e download somente depois da revisão.
+
+Não mantenha PDFs provisórios com extensão falsa nem cópias adicionais do currículo.

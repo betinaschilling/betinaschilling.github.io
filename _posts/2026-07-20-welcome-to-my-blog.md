@@ -1,30 +1,63 @@
 ---
 layout: post
-title: "ComuniDados: um manifesto de abertura"
-description: "Por que compreender dados é também uma forma de participar."
-date: 2026-07-20 12:00:00 -0300
-category: Manifesto
-read_time: 6 min
+title: "Olá, este é o ComuniDados"
+description: "Uma apresentação, um ponto de partida e a dinâmica de um espaço em que perguntas públicas encontram investigação técnica."
+date: 2026-07-24 12:00:00 -0300
+category: Abertura
+read_time: 7 min
 ---
 
-Dados não falam por si. Antes que um número apareça em uma apresentação, alguém decidiu o que medir, como classificar, quais registros excluir e que pergunta seria considerada relevante.
+Olá, sou Cheila.
+
+Trabalho na interseção entre estatística, engenharia de dados, ciência de dados e decisões de negócio. Boa parte do meu trabalho acontece diante de problemas que parecem técnicos — prever uma série, construir uma base, avaliar um modelo — mas que começam muito antes do código.
+
+Começam com uma pergunta. E toda pergunta carrega escolhas sobre o que merece ser observado, quais diferenças importam e o que faremos com a resposta.
+
+O **ComuniDados** nasce para tornar esse percurso visível.
+
+## Por que este espaço existe
+
+Dados não falam por si. Antes que um número apareça em uma apresentação, alguém decidiu o que medir, como classificar, quais registros excluir e qual pergunta seria considerada relevante.
 
 Essas escolhas não tornam os dados inúteis. Tornam a interpretação indispensável.
 
-O **ComuniDados** nasce como um espaço para tornar essas escolhas visíveis. Uma publicação independente sobre estatística, inteligência artificial, engenharia, comportamento e sociedade.
+Quero usar este espaço para escrever sobre dados, inteligência artificial, previsão, incerteza, decisões, negócios e sociedade. Não como assuntos isolados, mas como partes de sistemas que afetam pessoas, organizações e maneiras de compreender o mundo.
 
-## Acesso é apenas o primeiro passo
+O objetivo não é simplificar tudo. É explicar sem retirar a complexidade necessária.
 
-Democratizar dados costuma ser tratado como um problema de acesso: liberar uma tabela, criar um dashboard ou distribuir uma ferramenta de self-service.
+## Como será a dinâmica
 
-Mas ter acesso a números não significa saber interpretá-los. Uma democratização real também precisa distribuir capacidade de entender como os dados foram produzidos, reconhecer incertezas, questionar métodos e participar das decisões.
+As perguntas surgem no ComuniDados. Aqui elas recebem contexto, linguagem e uma razão para serem investigadas.
 
-## Rigor e compreensão não são opostos
+Quando uma pergunta exigir dados, modelos ou experimentos, o trabalho seguirá para o meu caderno técnico no GitHub. Ali ficarão código, decisões metodológicas, validações, resultados e limitações. O Data Science Workbench organizará os agentes, habilidades e padrões usados nesse processo.
 
-É possível explicar conceitos complexos sem transformá-los em slogans. É possível publicar código e, ao mesmo tempo, discutir as escolhas políticas, comerciais e humanas que existem ao redor dele.
+Depois, as evidências retornarão ao ComuniDados. Não apenas como métricas, mas como interpretação:
+
+1. o que a investigação permitiu observar;
+2. quais pressupostos sustentam o resultado;
+3. o que continua incerto;
+4. quais decisões a evidência pode ou não justificar;
+5. quais novas perguntas surgiram.
+
+O movimento será contínuo:
+
+> pergunta → investigação técnica → evidência → interpretação → nova pergunta
+
+## O que aparecerá por aqui
+
+Com o tempo, o ComuniDados reunirá:
+
+- **artigos**, para explicar ideias, métodos e evidências;
+- **dossiês**, quando várias publicações passarem a formar uma linha de investigação;
+- **investigações**, conectando a pergunta pública ao caderno técnico;
+- **notas**, para registrar aprendizados ainda em construção.
+
+Essas áreas começam vazias. Isso é intencional. Não quero preencher o site com projetos cenográficos, artigos fictícios ou conclusões antecipadas. O arquivo crescerá conforme o trabalho existir.
+
+## Um convite
+
+Democratizar dados costuma ser tratado como um problema de acesso: disponibilizar tabelas, dashboards e ferramentas. Mas acessar números não significa compreender como foram produzidos, reconhecer incertezas ou participar das decisões construídas a partir deles.
 
 > Democratizar dados não é entregar números. É distribuir capacidade de interpretação.
 
-Os projetos publicados aqui não aparecerão somente como vitrines de ferramentas. Cada investigação buscará documentar a pergunta, os dados, o método, os resultados, as limitações e o que aquela descoberta altera na decisão.
-
-Porque compreender dados é uma forma de participar.
+Este é o ponto de partida. O restante será construído pergunta por pergunta.
