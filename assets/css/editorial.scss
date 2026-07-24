@@ -6,3 +6,81 @@
 @media(max-width:680px){.site-header{height:68px}.wordmark{font-size:31px}.menu-button{display:block}.site-header nav{display:none;position:absolute;top:68px;left:-3.7vw;right:-3.7vw;background:var(--paper);padding:20px 4vw;border-bottom:1px solid;flex-direction:column;gap:0}.site-header nav.open{display:flex}.site-header nav a{padding:12px}.hero{display:block;padding:35px 22px 55px}.folio{display:none}.hero-copy{padding:0}.hero h1{font-size:51px}.hero-visual{min-height:460px;margin-top:40px}.note{width:74%;padding:35px 22px 22px}.annotation{display:none}.chart{left:0;right:0;height:55%}.home-section,.manifesto-teaser,.author-teaser,.page-shell{padding:65px 22px}.post-card.featured{grid-template-columns:1fr}.post-card{padding:24px 0}.post-body{padding:22px 0 0}.abstract-art{height:250px}.investigation-list{padding:0}.manifesto-teaser h2{font-size:51px}.author-teaser h2{font-size:48px}.author-mark{min-height:340px;font-size:75px}.site-footer{padding:65px 22px 25px}.footer-wordmark{font-size:60px}.footer-meta{grid-template-columns:1fr;gap:12px}.page-header h1{font-size:60px}.prose{font-size:17px;margin-top:45px}.prose h2{font-size:38px}.dossier-number{font-size:55px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .post-navigation{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;border-top:1px solid;padding-top:25px;margin-top:60px;font:600 9px monospace;text-transform:uppercase}.post-navigation a:last-child{text-align:right}
+
+/* ComuniDados — foundation */
+.hero-opening .hero-deck{max-width:570px}
+.question-art{position:absolute;left:5%;right:3%;bottom:28px;height:53%;border-left:1px solid;border-bottom:1px solid;background-image:linear-gradient(#1716121c 1px,transparent 1px),linear-gradient(90deg,#1716121c 1px,transparent 1px);background-size:100% 25%,12.5% 100%;overflow:hidden}
+.question-art>span{position:absolute;left:44%;top:5%;font:italic clamp(145px,16vw,235px)/1 Georgia;color:var(--ink);transform:rotate(4deg)}
+.question-art i{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--red);bottom:16%}
+.question-art i:nth-of-type(1){left:18%;box-shadow:36px -25px var(--ink),72px -8px var(--ink),108px -58px var(--ink)}
+.question-art i:nth-of-type(2){right:23%;box-shadow:-38px 20px var(--ink),38px -30px var(--ink)}
+.question-art i:nth-of-type(3){right:8%;bottom:50%}
+.opening-card{display:grid;grid-template-columns:minmax(180px,32%) 1fr;border-bottom:1px solid var(--line)}
+.opening-number{min-height:390px;display:grid;place-items:center;background-color:#e8dfca;background-image:linear-gradient(#17161218 1px,transparent 1px),linear-gradient(90deg,#17161218 1px,transparent 1px);background-size:30px 30px;color:var(--red);font:italic clamp(120px,15vw,220px)/1 Georgia}
+.opening-copy{padding:55px clamp(30px,6vw,95px);align-self:center}
+.opening-copy h2{max-width:780px;font:500 clamp(43px,5vw,76px)/.98 Georgia;letter-spacing:-.045em;margin:22px 0}
+.opening-copy>p:not(.meta){max-width:690px;font:19px/1.55 Georgia;color:var(--grey)}
+.ecosystem{display:grid;grid-template-columns:38% 57%;gap:5%}
+.ecosystem-flow{list-style:none;margin:0;padding:0}
+.ecosystem-flow li{display:grid;grid-template-columns:50px 1fr;column-gap:24px;padding:29px 0;border-top:1px solid var(--line)}
+.ecosystem-flow li>b{grid-row:1/5;color:var(--red);font:italic 24px Georgia}
+.ecosystem-flow h3{font:500 clamp(27px,3vw,39px)/1.05 Georgia;margin:7px 0 11px}
+.ecosystem-flow li>p:last-child{max-width:610px;margin:0;color:var(--grey);font:15px/1.55 Georgia}
+.blank-slate{padding-bottom:120px}
+.blank-grid{display:grid;grid-template-columns:1fr 1fr}
+.blank-grid article{min-height:350px;padding:50px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.blank-grid article:first-child{padding-left:0}
+.blank-grid article:last-child{border-right:0}
+.blank-grid h2,.empty-state h2{max-width:650px;font:500 clamp(38px,4vw,61px)/1 Georgia;letter-spacing:-.035em;margin:24px 0}
+.blank-grid article>p:not(.eyebrow){max-width:570px;color:var(--grey);font:16px/1.55 Georgia}
+.empty-state{max-width:930px;margin:45px 0 100px;padding:55px;border:1px solid var(--line);background:rgba(255,255,255,.12)}
+.empty-state p:not(.eyebrow){max-width:740px;font:18px/1.65 Georgia;color:var(--grey)}
+.empty-state a{color:var(--red);border-bottom:1px solid}
+
+@media(max-width:950px){
+  .ecosystem{grid-template-columns:1fr;gap:45px}
+}
+
+@media(max-width:680px){
+  .opening-card,.blank-grid{grid-template-columns:1fr}
+  .opening-number{min-height:230px}
+  .opening-copy{padding:38px 0}
+  .blank-grid article,.blank-grid article:first-child{padding:42px 0;border-right:0}
+  .empty-state{padding:30px 22px;margin-bottom:45px}
+  .question-art>span{font-size:170px}
+}
+
+/* Review adjustments: hierarchy, accessibility and document space */
+.meta{font-size:10px!important}
+.section-label,.read-link,.manifesto-teaser a,.author-teaser a{font-size:10px}
+.hero{min-height:680px}
+.hero-visual{min-height:550px}
+.workbench-layer{grid-column:2;margin-top:8px;padding:22px 26px;border-left:3px solid var(--red);background:rgba(255,255,255,.16)}
+.workbench-layer p:last-child{margin:5px 0 0;max-width:680px;font:15px/1.5 Georgia;color:var(--grey)}
+.workbench-layer a{color:var(--red);border-bottom:1px solid}
+.document-cover{position:relative;margin:20px 0 60px;padding:clamp(36px,6vw,75px);border:1px solid var(--line);border-left:8px solid var(--red);background:#f8f3e8;box-shadow:13px 15px 0 rgba(23,22,18,.12)}
+.document-cover h2{max-width:700px;margin:22px 0;font:500 clamp(42px,5vw,70px)/.98 Georgia;letter-spacing:-.04em}
+.document-cover>p:not(.eyebrow,.document-note){max-width:690px;font:18px/1.6 Georgia;color:var(--grey)}
+.document-stamp{display:inline-block;float:right;padding:9px 12px;border:1px solid var(--red);color:var(--red);font:700 10px monospace;letter-spacing:.09em}
+.document-meta{display:grid;grid-template-columns:repeat(4,1fr);margin:45px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.document-meta div{padding:18px 20px;border-right:1px solid var(--line)}
+.document-meta div:last-child{border-right:0}
+.document-meta dt{font:700 9px monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.document-meta dd{margin:7px 0 0;font:16px Georgia}
+.document-note{font:12px/1.6 monospace;color:var(--grey)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.manifesto-teaser a:focus-visible,.site-footer a:focus-visible{outline-color:var(--yellow)}
+
+@media(max-width:950px){
+  .hero{min-height:auto}
+  .hero-visual{min-height:460px}
+  .workbench-layer{grid-column:1}
+}
+
+@media(max-width:680px){
+  .hero-visual{min-height:410px}
+  .document-stamp{float:none;margin-bottom:25px}
+  .document-meta{grid-template-columns:1fr 1fr}
+  .document-meta div:nth-child(2){border-right:0}
+  .document-meta div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}

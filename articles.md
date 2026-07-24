@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Artigos"
-description: "Métodos, investigações e ensaios sobre dados, inteligência artificial e sociedade."
+description: "Textos sobre dados, inteligência artificial, decisões e sociedade."
 permalink: /artigos/
 ---
 
@@ -14,6 +14,10 @@ permalink: /artigos/
     <a class="read-link" href="{{ post.url | relative_url }}">Ler artigo →</a>
   </article>
 {% else %}
-  <p>Os primeiros artigos estão sendo preparados.</p>
+  <div class="empty-state">
+    <p class="eyebrow">Caderno em branco —</p>
+    <h2>Os próximos textos ainda serão escritos.</h2>
+    <p>O arquivo crescerá conforme novas perguntas, investigações e evidências forem produzidas.</p>
+  </div>
 {% endfor %}
 </div>

@@ -1,6 +1,6 @@
 <header class="site-header">
   <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="ComuniDados — início">Comuni<span>Dados</span></a>
-  <nav aria-label="Navegação principal">
+  <nav id="main-menu" aria-label="Navegação principal">
     {% for item in site.navigation %}
       <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
     {% endfor %}
