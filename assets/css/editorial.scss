@@ -6,6 +6,12 @@
 @media(max-width:680px){.site-header{height:68px}.wordmark{font-size:31px}.menu-button{display:block}.site-header nav{display:none;position:absolute;top:68px;left:-3.7vw;right:-3.7vw;background:var(--paper);padding:20px 4vw;border-bottom:1px solid;flex-direction:column;gap:0}.site-header nav.open{display:flex}.site-header nav a{padding:12px}.hero{display:block;padding:35px 22px 55px}.folio{display:none}.hero-copy{padding:0}.hero h1{font-size:51px}.hero-visual{min-height:460px;margin-top:40px}.note{width:74%;padding:35px 22px 22px}.annotation{display:none}.chart{left:0;right:0;height:55%}.home-section,.manifesto-teaser,.author-teaser,.page-shell{padding:65px 22px}.post-card.featured{grid-template-columns:1fr}.post-card{padding:24px 0}.post-body{padding:22px 0 0}.abstract-art{height:250px}.investigation-list{padding:0}.manifesto-teaser h2{font-size:51px}.author-teaser h2{font-size:48px}.author-mark{min-height:340px;font-size:75px}.site-footer{padding:65px 22px 25px}.footer-wordmark{font-size:60px}.footer-meta{grid-template-columns:1fr;gap:12px}.page-header h1{font-size:60px}.prose{font-size:17px;margin-top:45px}.prose h2{font-size:38px}.dossier-number{font-size:55px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .post-navigation{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;border-top:1px solid;padding-top:25px;margin-top:60px;font:600 9px monospace;text-transform:uppercase}.post-navigation a:last-child{text-align:right}
+.prose img{display:block;max-width:100%;height:auto;margin:42px auto 12px;border:1px solid var(--line)}
+.prose .table-wrap{overflow-x:auto;margin:30px 0}
+.prose table{width:100%;min-width:620px;border-collapse:collapse;font:15px/1.45 Arial,Helvetica,sans-serif}
+.prose th,.prose td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.prose th{font:700 10px monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+.prose pre{overflow-x:auto;padding:20px;background:#e3d8c4;font:14px/1.55 monospace}
 
 /* ComuniDados — foundation */
 .hero-opening .hero-deck{max-width:570px}

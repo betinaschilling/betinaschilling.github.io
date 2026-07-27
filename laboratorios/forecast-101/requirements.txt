@@ -1,0 +1,1 @@
+# Forecast 101 usa somente a biblioteca padrão do Python 3.10+.
