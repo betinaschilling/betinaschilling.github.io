@@ -62,3 +62,23 @@ Antes da publicação:
 4. habilite os links de visualização e download somente depois da revisão.
 
 Não mantenha PDFs provisórios com extensão falsa nem cópias adicionais do currículo.
+
+## Editar com Pages CMS
+
+O repositório possui um `.pages.yml` na raiz. Ele configura o [Pages CMS](https://pagescms.org/) para editar artigos em `_posts`, páginas institucionais existentes e imagens em `assets/images`, preservando os nomes de front matter usados pelo Jekyll.
+
+Para acessar:
+
+1. abra [app.pagescms.org](https://app.pagescms.org/);
+2. entre com GitHub e autorize o Pages CMS no repositório `betinaschilling/betinaschilling.github.io`;
+3. selecione a branch que deseja editar — a configuração é lida por repositório e branch;
+4. abra **Artigos** ou **Páginas institucionais**;
+5. salve as alterações em uma branch de trabalho e revise a PR antes do merge.
+
+Novos artigos recebem o formato de nome `AAAA-MM-DD-titulo.md`, usam `layout: post` e mantêm o conteúdo em Markdown. Imagens inseridas no rich text são salvas em `assets/images` e referenciadas como `/assets/images/...`, compatível com o Jekyll. O preview local consistente com os caminhos publicados é:
+
+```bash
+bundle exec jekyll serve
+```
+
+Depois, abra `http://localhost:4000/` ou a URL do post em `/categoria/AAAA/MM/DD/titulo/`, conforme o comportamento atual de `permalink: pretty` em `_config.yml` — por exemplo, `/método/2026/07/27/forecast-101-prever-nao-e-adivinhar/`. O Pages CMS não publica conteúdo por conta própria: ele grava alterações no GitHub; o build do GitHub Pages continua sendo a etapa de publicação.

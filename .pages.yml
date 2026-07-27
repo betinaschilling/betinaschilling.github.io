@@ -1,0 +1,263 @@
+# Pages CMS configuration for the ComuniDados Jekyll site.
+# The paths and front matter names intentionally match the existing files.
+
+media:
+  - name: images
+    label: Imagens
+    input: assets/images
+    output: /assets/images
+    categories: [image]
+    extensions: [png, jpg, jpeg, gif, webp, svg]
+    rename: safe
+
+content:
+  - name: articles
+    label: Artigos
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{title}.md"
+    subfolders: false
+    operations:
+      delete: false
+    view:
+      primary: title
+      fields: [title, date, category, read_time]
+      sort: [date, title]
+      search: [title, description, category]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: layout
+        label: false
+        type: string
+        default: post
+        hidden: true
+      - name: title
+        label: Título
+        type: string
+        required: true
+        options:
+          maxlength: 140
+      - name: description
+        label: Descrição
+        type: text
+        required: true
+        options:
+          maxlength: 280
+      - name: date
+        label: Data de publicação
+        type: date
+        required: true
+        options:
+          time: true
+          format: "yyyy-MM-dd HH:mm:ss xx"
+      - name: category
+        label: Categoria
+        type: string
+        required: true
+        options:
+          maxlength: 60
+      - name: read_time
+        label: Tempo de leitura
+        type: string
+        required: true
+        pattern: "^[0-9]+ min$"
+        description: "Use o formato: 8 min"
+      - name: body
+        label: Conteúdo
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
+          media: images
+          path: articles
+          rename: safe
+
+  - name: institutional
+    label: Páginas institucionais
+    type: group
+    items:
+      - name: about
+        label: Sobre
+        type: file
+        path: about.md
+        format: yaml-frontmatter
+        fields:
+          - name: layout
+            label: false
+            type: string
+            default: page
+            hidden: true
+          - name: title
+            label: Título
+            type: string
+            required: true
+          - name: description
+            label: Descrição
+            type: text
+            required: true
+          - name: permalink
+            label: Caminho público
+            type: string
+            required: true
+            readonly: true
+          - name: body
+            label: Conteúdo
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: images
+              path: institutional
+              rename: safe
+      - name: manifesto
+        label: Manifesto
+        type: file
+        path: manifesto.md
+        format: yaml-frontmatter
+        fields:
+          - name: layout
+            label: false
+            type: string
+            default: page
+            hidden: true
+          - name: title
+            label: Título
+            type: string
+            required: true
+          - name: description
+            label: Descrição
+            type: text
+            required: true
+          - name: permalink
+            label: Caminho público
+            type: string
+            required: true
+            readonly: true
+          - name: body
+            label: Conteúdo
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: images
+              path: institutional
+              rename: safe
+      - name: dossiers
+        label: Dossiês
+        type: file
+        path: dossies.md
+        format: yaml-frontmatter
+        fields:
+          - name: layout
+            label: false
+            type: string
+            default: page
+            hidden: true
+          - name: title
+            label: Título
+            type: string
+            required: true
+          - name: description
+            label: Descrição
+            type: text
+            required: true
+          - name: permalink
+            label: Caminho público
+            type: string
+            required: true
+            readonly: true
+          - name: body
+            label: Conteúdo
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: images
+              path: institutional
+              rename: safe
+      - name: investigations
+        label: Investigações
+        type: file
+        path: investigacoes.md
+        format: yaml-frontmatter
+        fields:
+          - name: layout
+            label: false
+            type: string
+            default: page
+            hidden: true
+          - name: title
+            label: Título
+            type: string
+            required: true
+          - name: description
+            label: Descrição
+            type: text
+            required: true
+          - name: permalink
+            label: Caminho público
+            type: string
+            required: true
+            readonly: true
+          - name: body
+            label: Conteúdo
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: images
+              path: institutional
+              rename: safe
+      - name: curriculum
+        label: Currículo
+        type: file
+        path: curriculo.md
+        format: yaml-frontmatter
+        fields:
+          - name: layout
+            label: false
+            type: string
+            default: page
+            hidden: true
+          - name: title
+            label: Título
+            type: string
+            required: true
+          - name: description
+            label: Descrição
+            type: text
+            required: true
+          - name: permalink
+            label: Caminho público
+            type: string
+            required: true
+            readonly: true
+          - name: body
+            label: Conteúdo
+            type: rich-text
+            required: true
+            options:
+              format: markdown
+              switcher: true
+              media: images
+              path: institutional
+              rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: create {path}"
+      update: "content: update {path}"
+      delete: "content: delete {path}"
+      rename: "content: rename {oldPath} -> {newPath}"
