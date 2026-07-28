@@ -1,0 +1,1 @@
+# O laboratório usa somente a biblioteca padrão do Python 3.10 ou superior.
