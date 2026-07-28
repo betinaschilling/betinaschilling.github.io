@@ -111,3 +111,5 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset
 .lab-status{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:700 10px/1.4 monospace;letter-spacing:.1em;color:var(--red)}
 .post-laboratory{max-width:850px;margin:20px auto 55px;padding:28px 32px;border-left:4px solid var(--red);background:#e8dfca}
 .post-laboratory p{margin:6px 0;font:17px/1.5 Georgia;color:var(--grey)}
+mjx-container[jax="SVG"][display="true"]{max-width:100%;margin:38px 0!important;padding:18px 0;overflow-x:auto;overflow-y:hidden}
+mjx-container[jax="SVG"] svg{min-width:0}

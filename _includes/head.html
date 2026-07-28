@@ -5,4 +5,19 @@
   {% seo %}
   <link rel="icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/editorial.css' | relative_url }}">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      svg: {
+        fontCache: 'global',
+        displayAlign: 'center'
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
 </head>
