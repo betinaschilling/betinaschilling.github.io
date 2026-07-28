@@ -68,12 +68,14 @@
 .document-cover h2{max-width:700px;margin:22px 0;font:500 clamp(42px,5vw,70px)/.98 Georgia;letter-spacing:-.04em}
 .document-cover>p:not(.eyebrow,.document-note){max-width:690px;font:18px/1.6 Georgia;color:var(--grey)}
 .document-stamp{display:inline-block;float:right;padding:9px 12px;border:1px solid var(--red);color:var(--red);font:700 10px monospace;letter-spacing:.09em}
-.document-meta{display:grid;grid-template-columns:repeat(4,1fr);margin:45px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.document-meta{display:grid;grid-template-columns:repeat(3,1fr);margin:45px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .document-meta div{padding:18px 20px;border-right:1px solid var(--line)}
 .document-meta div:last-child{border-right:0}
 .document-meta dt{font:700 9px monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
 .document-meta dd{margin:7px 0 0;font:16px Georgia}
 .document-note{font:12px/1.6 monospace;color:var(--grey)}
+.document-followup{max-width:690px;margin:0 auto 70px;font:18px/1.6 Georgia;color:var(--grey)}
+.document-followup a{color:var(--red);border-bottom:1px solid var(--red)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px}
 .manifesto-teaser a:focus-visible,.site-footer a:focus-visible{outline-color:var(--yellow)}
 
@@ -89,4 +91,5 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset
   .document-meta{grid-template-columns:1fr 1fr}
   .document-meta div:nth-child(2){border-right:0}
   .document-meta div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .document-followup{font-size:17px;margin-bottom:50px}
 }
