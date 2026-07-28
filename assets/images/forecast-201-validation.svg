@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620">
+<rect width="100%" height="100%" fill="#f3eedf"/>
+<text x="90" y="35" font-family="Georgia,serif" font-size="24" fill="#22201d">WAPE estimado por protocolo de validação</text>
+<line x1="90" y1="480.0" x2="1100" y2="480.0" stroke="#d7cfbb"/>
+<text x="78" y="485.0" text-anchor="end" font-family="Arial" font-size="13" fill="#625d54">0%</text>
+<line x1="90" y1="397.6" x2="1100" y2="397.6" stroke="#d7cfbb"/>
+<text x="78" y="402.6" text-anchor="end" font-family="Arial" font-size="13" fill="#625d54">2%</text>
+<line x1="90" y1="315.3" x2="1100" y2="315.3" stroke="#d7cfbb"/>
+<text x="78" y="320.3" text-anchor="end" font-family="Arial" font-size="13" fill="#625d54">4%</text>
+<line x1="90" y1="232.9" x2="1100" y2="232.9" stroke="#d7cfbb"/>
+<text x="78" y="237.9" text-anchor="end" font-family="Arial" font-size="13" fill="#625d54">6%</text>
+<line x1="90" y1="150.6" x2="1100" y2="150.6" stroke="#d7cfbb"/>
+<text x="78" y="155.6" text-anchor="end" font-family="Arial" font-size="13" fill="#625d54">8%</text>
+<line x1="90" y1="68.2" x2="1100" y2="68.2" stroke="#d7cfbb"/>
+<text x="78" y="73.2" text-anchor="end" font-family="Arial" font-size="13" fill="#625d54">10%</text>
+<polyline points="90.0,259.9 216.2,259.9 342.5,259.9 468.8,247.4 595.0,238.5 721.2,230.9 847.5,253.2 973.8,259.9 1100.0,259.9" fill="none" stroke="#22201d" stroke-width="3"/>
+<circle cx="90.0" cy="259.9" r="4" fill="#22201d"/>
+<circle cx="216.2" cy="259.9" r="4" fill="#22201d"/>
+<circle cx="342.5" cy="259.9" r="4" fill="#22201d"/>
+<circle cx="468.8" cy="247.4" r="4" fill="#22201d"/>
+<circle cx="595.0" cy="238.5" r="4" fill="#22201d"/>
+<circle cx="721.2" cy="230.9" r="4" fill="#22201d"/>
+<circle cx="847.5" cy="253.2" r="4" fill="#22201d"/>
+<circle cx="973.8" cy="259.9" r="4" fill="#22201d"/>
+<circle cx="1100.0" cy="259.9" r="4" fill="#22201d"/>
+<polyline points="90.0,130.3 216.2,261.8 342.5,209.7 468.8,259.4 595.0,256.3 721.2,194.7 847.5,175.2 973.8,261.8 1100.0,261.8" fill="none" stroke="#b4492c" stroke-width="3"/>
+<circle cx="90.0" cy="130.3" r="4" fill="#b4492c"/>
+<circle cx="216.2" cy="261.8" r="4" fill="#b4492c"/>
+<circle cx="342.5" cy="209.7" r="4" fill="#b4492c"/>
+<circle cx="468.8" cy="259.4" r="4" fill="#b4492c"/>
+<circle cx="595.0" cy="256.3" r="4" fill="#b4492c"/>
+<circle cx="721.2" cy="194.7" r="4" fill="#b4492c"/>
+<circle cx="847.5" cy="175.2" r="4" fill="#b4492c"/>
+<circle cx="973.8" cy="261.8" r="4" fill="#b4492c"/>
+<circle cx="1100.0" cy="261.8" r="4" fill="#b4492c"/>
+<polyline points="90.0,113.9 216.2,289.3 342.5,259.2 468.8,277.9 595.0,261.2 721.2,257.6 847.5,278.8 973.8,261.2 1100.0,257.4" fill="none" stroke="#c59622" stroke-width="3"/>
+<circle cx="90.0" cy="113.9" r="4" fill="#c59622"/>
+<circle cx="216.2" cy="289.3" r="4" fill="#c59622"/>
+<circle cx="342.5" cy="259.2" r="4" fill="#c59622"/>
+<circle cx="468.8" cy="277.9" r="4" fill="#c59622"/>
+<circle cx="595.0" cy="261.2" r="4" fill="#c59622"/>
+<circle cx="721.2" cy="257.6" r="4" fill="#c59622"/>
+<circle cx="847.5" cy="278.8" r="4" fill="#c59622"/>
+<circle cx="973.8" cy="261.2" r="4" fill="#c59622"/>
+<circle cx="1100.0" cy="257.4" r="4" fill="#c59622"/>
+<text x="90.0" y="505" transform="rotate(35 90.0 505)" font-family="Arial" font-size="12" fill="#403c36">Expansiva</text>
+<text x="216.2" y="505" transform="rotate(35 216.2 505)" font-family="Arial" font-size="12" fill="#403c36">Janela 365d</text>
+<text x="342.5" y="505" transform="rotate(35 342.5 505)" font-family="Arial" font-size="12" fill="#403c36">Janela 180d</text>
+<text x="468.8" y="505" transform="rotate(35 468.8 505)" font-family="Arial" font-size="12" fill="#403c36">Gap 7d</text>
+<text x="595.0" y="505" transform="rotate(35 595.0 505)" font-family="Arial" font-size="12" fill="#403c36">Gap 14d</text>
+<text x="721.2" y="505" transform="rotate(35 721.2 505)" font-family="Arial" font-size="12" fill="#403c36">Sobrep. 50%</text>
+<text x="847.5" y="505" transform="rotate(35 847.5 505)" font-family="Arial" font-size="12" fill="#403c36">Sobrep. 75%</text>
+<text x="973.8" y="505" transform="rotate(35 973.8 505)" font-family="Arial" font-size="12" fill="#403c36">Refit a cada 2 origens</text>
+<text x="1100.0" y="505" transform="rotate(35 1100.0 505)" font-family="Arial" font-size="12" fill="#403c36">Refit a cada 4 origens</text>
+<line x1="90" y1="590" x2="118" y2="590" stroke="#22201d" stroke-width="4"/>
+<text x="126" y="595" font-family="Arial" font-size="14" fill="#22201d">Seasonal naive</text>
+<line x1="360" y1="590" x2="388" y2="590" stroke="#b4492c" stroke-width="4"/>
+<text x="396" y="595" font-family="Arial" font-size="14" fill="#22201d">Média sazonal</text>
+<line x1="630" y1="590" x2="658" y2="590" stroke="#c59622" stroke-width="4"/>
+<text x="666" y="595" font-family="Arial" font-size="14" fill="#22201d">Regressão de calendário</text>
+</svg>

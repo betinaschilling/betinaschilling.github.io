@@ -12,10 +12,19 @@ suficientes para reprodução e revisão.
 <article class="project-dossier">
   <span class="dossier-number">01</span>
   <p class="eyebrow">ATIVO · SÉRIES TEMPORAIS</p>
-  <h2><a href="{{ '/laboratorio/forecast-101/' | relative_url }}">Forecast 101: prever não é adivinhar</a></h2>
+  <h2><a href="{{ '/laboratorio/forecast-101/' | relative_url }}">Forecast 101: avaliação temporal, incerteza e decisão</a></h2>
   <p>Um laboratório reproduzível sobre baseline sazonal, validação temporal,
   métricas de erro, incerteza e decisão.</p>
   <a class="read-link" href="{{ '/laboratorio/forecast-101/' | relative_url }}">Abrir caderno técnico →</a>
+</article>
+
+<article class="project-dossier">
+  <span class="dossier-number">02</span>
+  <p class="eyebrow">ATIVO · VALIDAÇÃO TEMPORAL</p>
+  <h2><a href="{{ '/laboratorio/forecast-201/' | relative_url }}">Forecast 201: como a validação temporal altera a conclusão</a></h2>
+  <p>Um experimento controlado sobre janelas, gaps, sobreposição, refit,
+  validação aninhada e teste final bloqueado.</p>
+  <a class="read-link" href="{{ '/laboratorio/forecast-201/' | relative_url }}">Abrir caderno técnico →</a>
 </article>
 
 ## Critério de publicação
