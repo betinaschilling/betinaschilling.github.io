@@ -8,6 +8,13 @@ layout: default
     {% if page.description %}<p class="page-description">{{ page.description }}</p>{% endif %}
   </header>
   <div class="prose">{{ content }}</div>
+  {% if page.laboratory %}
+  <aside class="post-laboratory">
+    <p class="meta">CADERNO TÉCNICO ASSOCIADO</p>
+    <p>Consulte método, evidências, limitações e instruções de reprodução.</p>
+    <a class="read-link" href="{{ page.laboratory | relative_url }}">Abrir laboratório →</a>
+  </aside>
+  {% endif %}
   <nav class="post-navigation" aria-label="Navegação entre artigos">
     {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% endif %}
     <a href="{{ '/artigos/' | relative_url }}">Todos os artigos</a>
