@@ -1,0 +1,169 @@
+% Resume — Cheila Betina Schilling dos Santos
+% First English version — content subject to review before publication.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,top=1.45cm,bottom=1.35cm,left=1.55cm,right=1.55cm]{geometry}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\definecolor{ink}{HTML}{171612}
+\definecolor{red}{HTML}{A43A2B}
+\definecolor{grey}{HTML}{656057}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=red,
+  linkcolor=red,
+  pdftitle={Resume — Cheila Betina Schilling dos Santos},
+  pdfauthor={Cheila Betina Schilling dos Santos}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.15em,itemsep=1pt,topsep=3pt,parsep=0pt}
+\setlength{\columnsep}{18pt}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\titleformat{\section}{\large\bfseries\color{red}\sffamily}{}{0pt}{}[\vspace{-3pt}\color{red}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\newcommand{\role}[3]{%
+  \Needspace{13\baselineskip}%
+  \textbf{#1}\\[-1pt]
+  {\small\textcolor{grey}{#2}}\\[-1pt]
+  #3\par}
+\newcommand{\skill}[2]{\textbf{#1:} #2\par}
+
+\begin{document}
+
+{\sffamily
+{\fontsize{24}{27}\selectfont\bfseries Cheila Betina Schilling dos Santos}\par
+\vspace{3pt}
+{\large\color{red} Data · Analytics · Advanced Analytics}\par
+\vspace{5pt}
+{\small
+Araricá, RS, Brazil \quad | \quad (+55) 51 99949-2331 \quad | \quad
+\href{mailto:betina.ssc@gmail.com}{betina.ssc@gmail.com}\\
+\href{https://github.com/betinaschilling}{github.com/betinaschilling} \quad | \quad
+\href{https://betinaschilling.github.io/}{betinaschilling.github.io} \quad | \quad
+\href{https://www.linkedin.com/in/cheila-betina-santos/}{linkedin.com/in/cheila-betina-santos} \quad | \quad
+\href{https://orcid.org/0009-0008-6145-3587}{ORCID}
+}\par
+}
+
+\section{Professional summary}
+
+Data professional with experience at the intersection of data engineering, data science, and analytics. Works across problem definition, solution design, methodological choices, data pipelines, model development, communication of results, and the continuous improvement of analytical products. Combines technical expertise in distributed data systems, cloud platforms, machine learning, forecasting, and advanced analytics with experience in business decision-making, governance, quality, deployment, and multidisciplinary collaboration.
+
+\section{Professional experience}
+
+\role{Lojas Renner S.A. — Mid-level Data Scientist}{Porto Alegre, RS, Brazil · Aug. 2025 – present}{
+\begin{itemize}
+  \item Developed predictive models for forecasting, elasticity, pricing, and allocation, as well as classification models for churn-related applications.
+  \item Applied statistical and time-series methods, including regression, OLS, ARIMA, SARIMA, Prophet, and VAR/VECM.
+  \item Used CatBoost, XGBoost, and LightGBM, as well as Chronos, TimesFM, and DeepAR, both in experimentation and in solutions used in production.
+  \item Built modular Python and Spark code for data ingestion, processing, model training, and evaluation.
+  \item Integrated data from Databricks, public APIs, and external sources, including climate variables and economic indicators.
+  \item Performed exploratory and statistical analyses, feature engineering, variable selection, hyperparameter tuning, and model evaluation.
+  \item Contributed to production deployment and monitoring of predictive models.
+  \item Supported new and legacy data products in production, including pipeline, model, and operational monitoring.
+  \item Integrated pipelines with monitoring and alerting mechanisms, including Zabbix, to identify execution failures.
+\end{itemize}}
+
+\role{Grendene S.A. — Senior Data Analyst (Product) / Data Engineer (CoE)}{Farroupilha, RS, Brazil · Apr. 2024 – Aug. 2025}{
+\begin{itemize}
+  \item Developed and optimized data pipelines using Informatica Data Integration, Apache Spark, AlloyDB, and Google Cloud Platform.
+  \item Implemented streaming solutions with Pub/Sub and self-service SQL architectures for batch and real-time data through Analytics Hub.
+  \item Structured and managed data layers — stage, raw, silver, gold, self-service, and aggregated — using Cloud Storage.
+  \item Developed and maintained data flows connecting operational sources, analytical layers, and data products.
+  \item Deployed and maintained Power BI dashboards in staging and production environments.
+  \item Participated in committees responsible for approving code changes and production deployments, including GitLab merge request reviews.
+  \item Trained analytical teams in development best practices, code quality, and version control.
+  \item Applied IAM concepts for governance, security, and access control across data and environments.
+\end{itemize}}
+
+\role{Portobello Shop — Mid-level Data Analyst (CoE) / Analytics Engineer (Product)}{Florianópolis, SC, Brazil · Aug. 2022 – Apr. 2024}{
+\begin{itemize}
+  \item Developed interactive Tableau dashboards for sales analysis and operational performance monitoring.
+  \item Performed exploratory analyses on large datasets using Databricks.
+  \item Developed and maintained SQL queries in gold and aggregated layers, including business-rule implementation.
+  \item Managed users, groups, and permissions in Tableau Server and deployed dashboards to production.
+  \item Trained business teams on self-service dashboards and the use of integrated data sources.
+  \item Implemented data integration and automation solutions using Apache Airflow.
+\end{itemize}}
+
+\role{Azzas S.A. — Data Analyst / Statistician (Product)}{Campo Bom, RS, Brazil · Dec. 2017 – Aug. 2022}{
+\begin{itemize}
+  \item Developed statistical models for revenue budgeting, performance-variation analysis, and financial-projection reviews.
+  \item Performed plan-versus-actual analyses to support adjustments to commercial and sales strategies.
+  \item Developed time-series models with Prophet to forecast monthly order volume.
+  \item Created Tableau dashboards for planning, commercial, e-commerce, and management teams.
+  \item Validated data and acted as data owner for omnichannel data, supporting governance and consistency across physical and digital channels.
+  \item Developed and evolved analytical solutions for omnichannel and CRM products, including NPS indicators.
+  \item Applied linear regression, classification, and clustering to identify behavioral patterns and support commercial strategies.
+\end{itemize}}
+
+\role{GetNet Tecnologia — Data Analyst / Operations Planning}{Porto Alegre, RS, Brazil · Feb. 2010 – Aug. 2015}{
+\begin{itemize}
+  \item Developed financial and operational forecasting models for cash-flow analysis, risk assessment, and capacity planning in payment processes.
+  \item Applied operations research and queueing-theory concepts, including Erlang-B and Erlang-C, to estimate demand, size resources, and optimize contact-center capacity.
+  \item Created executive and operational reports using Power BI, SQL Server, VBA, and VB/RPA automation.
+  \item Implemented SAP Business Intelligence solutions for D-1 financial analysis and developed Oracle SQL queries.
+  \item Applied regression techniques to analyze financial and market trends.
+\end{itemize}}
+
+\section{Education}
+
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+\textbf{Master's in Business Administration — Data Science focus} & Mar. 2026 – Mar. 2029\\
+FEEVALE · Novo Hamburgo, Brazil · in progress &\\[3pt]
+\textbf{Bachelor's degree in Statistics — second undergraduate degree} & Mar. 2026 – Mar. 2029\\
+UNICV · Curitiba, Brazil · in progress &\\[3pt]
+\textbf{Bachelor's degree in Production Engineering — second undergraduate degree} & Mar. 2026 – Mar. 2029\\
+UNICV · Curitiba, Brazil · in progress &\\[3pt]
+\textbf{Postgraduate degree in Applied Mathematics} & Jan. 2025 – May 2025\\
+Focus · São Paulo, Brazil · completed &\\[3pt]
+\textbf{Postgraduate degree in Data Analytics} & Apr. 2024 – Apr. 2025\\
+FIAP · São Paulo, Brazil · completed &\\[3pt]
+\textbf{Bachelor's degree in Business Management} & Jan. 2016 – Jan. 2019\\
+UNINTER · Curitiba, Brazil · completed &
+\end{tabularx}
+
+\Needspace{18\baselineskip}
+\section{Technical skills}
+
+\begin{multicols}{2}
+\raggedcolumns
+\skill{Data engineering and platforms}{Python, SQL, Apache Spark, Databricks, BigQuery, Cloud Storage, AlloyDB, Pub/Sub, Analytics Hub, Oracle, PostgreSQL, MySQL, and MongoDB.}
+\skill{Cloud and data operations}{Google Cloud Platform, AWS, Azure, Airflow, Cloud Run, Informatica Data Integration, batch and streaming pipelines, IAM, governance, and access control.}
+\skill{Data science and advanced analytics}{Regression, classification, clustering, forecasting, time-series analysis, elasticity, pricing, allocation, churn, optimization, and queueing analysis.}
+\skill{Statistical and predictive models}{OLS, ARIMA, SARIMA, Prophet, VAR/VECM, CatBoost, XGBoost, LightGBM, Chronos, TimesFM, and DeepAR.}
+\skill{Feature selection and optimization}{Boruta, Optuna, feature engineering, temporal validation, hyperparameter tuning, and comparative model evaluation.}
+\skill{Analysis and visualization}{EDA, ADF, KPSS, CCF, Granger, cointegration, Tableau, Power BI, Matplotlib, Plotly, and Streamlit.}
+\skill{Quantitative methods}{Erlang-B, Erlang-C, queueing theory, capacity planning, and resource optimization.}
+\skill{Software engineering and collaboration}{Modular code, testing, documentation, Git, GitHub, GitLab, branching, merge requests, code review, and deployment processes.}
+\skill{Agile and delivery practices}{Agile, Scrum, Kanban, and OKR; planning, prioritization, backlog refinement, daily stand-ups, reviews, retrospectives, and delivery tracking.}
+\skill{Operations and support}{Production support for new and legacy data products, post-deployment support, pipeline and model monitoring, alerting, incident diagnosis, and Zabbix.}
+\skill{Professional practices}{Data quality, deployment, monitoring, technical documentation, training, and communication with stakeholders.}
+\end{multicols}
+
+\section{Languages}
+
+Portuguese · English · Spanish
+
+\vfill
+{\footnotesize\color{grey} Resume in progress · Last updated: July 2026}
+
+\end{document}
