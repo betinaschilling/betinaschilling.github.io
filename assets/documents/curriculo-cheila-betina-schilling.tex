@@ -1,0 +1,172 @@
+% Currículo de Cheila Betina Schilling dos Santos
+% Primeira versão editorial — conteúdo sujeito a revisão antes da publicação.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[a4paper,top=1.45cm,bottom=1.35cm,left=1.55cm,right=1.55cm]{geometry}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{needspace}
+\usepackage{multicol}
+
+\definecolor{ink}{HTML}{171612}
+\definecolor{red}{HTML}{A43A2B}
+\definecolor{grey}{HTML}{656057}
+\definecolor{paper}{HTML}{F8F3E8}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=red,
+  linkcolor=red,
+  pdftitle={Currículo — Cheila Betina Schilling dos Santos},
+  pdfauthor={Cheila Betina Schilling dos Santos}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.15em,itemsep=1pt,topsep=3pt,parsep=0pt}
+\setlength{\columnsep}{18pt}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\titleformat{\section}{\large\bfseries\color{red}\sffamily}{}{0pt}{}[\vspace{-3pt}\color{red}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titleformat{\subsection}{\normalsize\bfseries\color{ink}\sffamily}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{7pt}{1pt}
+
+\newcommand{\role}[3]{%
+  \Needspace{13\baselineskip}%
+  \textbf{#1}\\[-1pt]
+  {\small\textcolor{grey}{#2}}\\[-1pt]
+  #3\par}
+\newcommand{\skill}[2]{\textbf{#1:} #2\par}
+
+\begin{document}
+
+{\sffamily
+{\fontsize{24}{27}\selectfont\bfseries Cheila Betina Schilling dos Santos}\par
+\vspace{3pt}
+{\large\color{red} Dados · Analytics · Advanced Analytics}\par
+\vspace{5pt}
+{\small
+Araricá, RS \quad | \quad (+55) 51 99949-2331 \quad | \quad
+\href{mailto:betina.ssc@gmail.com}{betina.ssc@gmail.com}\\
+\href{https://github.com/betinaschilling}{github.com/betinaschilling} \quad | \quad
+\href{https://betinaschilling.github.io/}{betinaschilling.github.io} \quad | \quad
+\href{https://www.linkedin.com/in/cheila-betina-santos/}{linkedin.com/in/cheila-betina-santos} \quad | \quad
+\href{https://orcid.org/0009-0008-6145-3587}{ORCID}
+}\par
+}
+
+\section{Resumo profissional}
+
+Profissional de dados com experiência na interseção entre engenharia, ciência de dados e analytics. Atua na definição de problemas, desenho de soluções, escolha metodológica, construção de pipelines e modelos, comunicação de resultados e evolução de produtos analíticos. Combina conhecimento técnico em dados distribuídos, cloud, machine learning, forecasting e advanced analytics com experiência em decisões de negócio, governança, qualidade, implantação e colaboração multidisciplinar.
+
+\section{Experiência profissional}
+
+\role{Lojas Renner S.A. — Cientista de Dados Pleno}{Porto Alegre, RS · ago. 2025 – atual}{
+\begin{itemize}
+  \item Desenvolvimento de modelos preditivos para forecasting, elasticidade, pricing e alocação, além de modelos de classificação aplicados a churn.
+  \item Aplicação de métodos estatísticos e de séries temporais, incluindo regressão, OLS, ARIMA, SARIMA, Prophet e VAR/VECM.
+  \item Utilização de CatBoost, XGBoost e LightGBM, além de Chronos, TimesFM e DeepAR, tanto em experimentos quanto em soluções utilizadas em produção.
+  \item Construção de códigos modularizados em Python e Spark para ingestão, processamento, treinamento e avaliação de modelos.
+  \item Integração de dados provenientes de Databricks, APIs públicas e fontes externas, incluindo variáveis climáticas e indicadores econômicos.
+  \item Execução de análises exploratórias e estatísticas, engenharia de atributos, seleção de variáveis, ajuste de hiperparâmetros e avaliação de modelos.
+  \item Participação na produtização, implantação e acompanhamento de modelos em produção.
+  \item Acompanhamento e sustentação de produtos de dados novos e legados, incluindo monitoramento de pipelines, modelos e rotinas operacionais.
+  \item Integração de pipelines com mecanismos de monitoramento e alertas, incluindo Zabbix, para identificação de falhas de execução.
+\end{itemize}}
+
+\role{Grendene S.A. — Analista de Dados Sênior (Produto) / Engenheira de Dados (COE)}{Farroupilha, RS · abr. 2024 – ago. 2025}{
+\begin{itemize}
+  \item Desenvolvimento e otimização de pipelines de dados utilizando Informatica Data Integration, Apache Spark, AlloyDB e Google Cloud Platform.
+  \item Implementação de soluções de processamento em streaming com Pub/Sub e arquiteturas de self-service SQL para dados batch e tempo real via Analytics Hub.
+  \item Estruturação e gestão de camadas de dados — stage, raw, silver, gold, self-service e agregadas — utilizando Cloud Storage.
+  \item Desenvolvimento e manutenção de fluxos de dados para integração entre fontes operacionais, camadas analíticas e produtos de dados.
+  \item Implantação e manutenção de painéis Power BI em ambientes de homologação e produção.
+  \item Participação em comitês de aprovação de mudanças de código e deploys em produção, incluindo revisão de merge requests no GitLab.
+  \item Treinamento de equipes analíticas em boas práticas de desenvolvimento, qualidade de código e versionamento.
+  \item Aplicação de conceitos de IAM para governança, segurança e controle de acessos aos ambientes e dados.
+\end{itemize}}
+
+\role{Portobello Shop — Analista de Dados Pleno (COE) / Analytics Engineer (Produto)}{Florianópolis, SC · ago. 2022 – abr. 2024}{
+\begin{itemize}
+  \item Desenvolvimento de dashboards interativos em Tableau para análise de vendas e acompanhamento de desempenho operacional.
+  \item Execução de análises exploratórias sobre grandes volumes de dados utilizando Databricks.
+  \item Desenvolvimento e manutenção de consultas SQL nas camadas gold e agregadas, com implementação de regras de negócio.
+  \item Administração de usuários, grupos e permissões no Tableau Server e implantação de painéis em produção.
+  \item Condução de treinamentos para equipes de negócio sobre dashboards autossustentáveis e fontes de dados integradas.
+  \item Implementação de soluções de integração e automação de dados utilizando Apache Airflow.
+\end{itemize}}
+
+\role{Azzas S.A. — Analista de Dados / Estatística (Produto)}{Campo Bom, RS · dez. 2017 – ago. 2022}{
+\begin{itemize}
+  \item Desenvolvimento de modelos estatísticos para orçamento de receita, análise de variações de desempenho e revisão de projeções financeiras.
+  \item Execução de análises de previsto versus realizado para apoiar ajustes nas estratégias comerciais e de vendas.
+  \item Desenvolvimento de modelos de séries temporais com Prophet para previsão de volumetria mensal de pedidos.
+  \item Criação de dashboards Tableau para planejamento, comercial, e-commerce e gestão.
+  \item Validação de dados e atuação como data owner dos dados de omnichannel, apoiando governança e consistência entre canais físicos e digitais.
+  \item Desenvolvimento e evolução de soluções analíticas para produtos de omnichannel e CRM, incluindo indicadores de NPS.
+  \item Aplicação de regressão linear, classificação e análise de clusters para identificar padrões de comportamento e apoiar estratégias comerciais.
+\end{itemize}}
+
+\role{GetNet Tecnologia — Analista de Dados / Planejamento Operacional}{Porto Alegre, RS · fev. 2010 – ago. 2015}{
+\begin{itemize}
+  \item Desenvolvimento de modelos de previsão financeira e operacional para análise de fluxo de caixa, avaliação de riscos e planejamento de capacidade em processos de pagamentos.
+  \item Aplicação de conceitos de pesquisa operacional e teoria das filas, incluindo Erlang-B e Erlang-C, para estimar demanda, dimensionar recursos e otimizar a capacidade de atendimento em centrais de chamadas.
+  \item Criação de relatórios executivos e operacionais utilizando Power BI, SQL Server, VBA e automações com VB e RPA.
+  \item Implantação de soluções de BI em SAP para análise financeira em D-1 e desenvolvimento de consultas SQL em Oracle.
+  \item Utilização de técnicas de regressão para análise de tendências financeiras e de mercado.
+\end{itemize}}
+
+\section{Educação}
+
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+\textbf{Mestrado em Administração — foco em Ciência de Dados} & mar. 2026 – mar. 2029\\
+FEEVALE · Novo Hamburgo, RS · em andamento &\\[3pt]
+\textbf{Bacharelado em Estatística — segunda graduação} & mar. 2026 – mar. 2029\\
+UNICV · Curitiba, PR · em andamento &\\[3pt]
+\textbf{Bacharelado em Engenharia de Produção — segunda graduação} & mar. 2026 – mar. 2029\\
+UNICV · Curitiba, PR · em andamento &\\[3pt]
+\textbf{Pós-graduação em Matemática Aplicada} & jan. 2025 – maio 2025\\
+Focus · São Paulo, SP · concluída &\\[3pt]
+\textbf{Pós-graduação em Data Analytics} & abr. 2024 – abr. 2025\\
+FIAP · São Paulo, SP · concluída &\\[3pt]
+\textbf{Graduação em Processos Gerenciais} & jan. 2016 – jan. 2019\\
+UNINTER · Curitiba, PR · concluída &
+\end{tabularx}
+
+\Needspace{18\baselineskip}
+\section{Competências técnicas}
+
+\begin{multicols}{2}
+\raggedcolumns
+\skill{Engenharia e plataformas de dados}{Python, SQL, Apache Spark, Databricks, BigQuery, Cloud Storage, AlloyDB, Pub/Sub, Analytics Hub, Oracle, PostgreSQL, MySQL e MongoDB.}
+\skill{Cloud e operação}{Google Cloud Platform, AWS, Azure, Airflow, Cloud Run, Informatica Data Integration, pipelines batch e streaming, IAM, governança e controle de acessos.}
+\skill{Ciência de dados e advanced analytics}{Regressão, classificação, clustering, forecasting, séries temporais, elasticidade, pricing, alocação, churn, otimização e análise de filas.}
+\skill{Modelos estatísticos e preditivos}{OLS, ARIMA, SARIMA, Prophet, VAR/VECM, CatBoost, XGBoost, LightGBM, Chronos, TimesFM e DeepAR.}
+\skill{Seleção e otimização}{Boruta, Optuna, engenharia de atributos, validação temporal, ajuste de hiperparâmetros e avaliação comparativa de modelos.}
+\skill{Análise e visualização}{EDA, ADF, KPSS, CCF, Granger, cointegração, Tableau, Power BI, Matplotlib, Plotly e Streamlit.}
+\skill{Métodos quantitativos}{Erlang-B, Erlang-C, teoria das filas, dimensionamento de capacidade e otimização de recursos.}
+\skill{Engenharia de software e colaboração}{Código modularizado, testes, documentação, Git, GitHub, GitLab, branching, merge requests, revisão de código e processos de implantação.}
+\skill{Agilidade e gestão}{Agile, Scrum, Kanban e OKR; planejamento, priorização, refinamento do backlog, reuniões diárias, revisões, retrospectivas e acompanhamento de entregas.}
+\skill{Operação e sustentação}{Acompanhamento de produtos de dados novos e legados, suporte pós-implantação, monitoramento de pipelines e modelos, alertas, diagnóstico de falhas e Zabbix.}
+\skill{Práticas profissionais}{Qualidade de dados, implantação, monitoramento, documentação técnica, treinamento e comunicação com stakeholders.}
+\end{multicols}
+
+\section{Idiomas}
+
+Português · Inglês · Espanhol
+
+\vfill
+{\footnotesize\color{grey} Currículo em construção · Última atualização: julho de 2026}
+
+\end{document}

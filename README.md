@@ -48,10 +48,12 @@ O GitHub Pages publica o conteúdo do branch configurado no repositório. Antes 
 
 ## Publicar o currículo
 
-O único caminho aceito para o PDF é:
+Os caminhos canônicos dos PDFs são:
 
 ```text
 assets/documents/curriculo-cheila-betina-schilling.pdf
+assets/documents/curriculo-cheila-betina-schilling-en.pdf
+assets/documents/curriculo-cheila-betina-schilling-es.pdf
 ```
 
 Antes da publicação:
