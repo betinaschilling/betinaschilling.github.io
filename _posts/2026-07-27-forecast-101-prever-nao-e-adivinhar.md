@@ -1,33 +1,29 @@
 ---
 layout: post
-title: "Forecast 101: prever não é adivinhar"
-description: "Um ensaio técnico sobre formulação, backtesting, baselines, métricas, incerteza e valor de decisão em séries temporais."
+title: "Forecast 101: avaliação temporal, incerteza e decisão"
+description: "Formulação, backtesting, baselines, métricas, previsão probabilística e decisão em séries temporais."
 date: 2026-07-27 12:00:00 -0300
 category: Método
-read_time: 30 min
+read_time: 32 min
 series: Forecast 101
 featured_order: 2
 laboratory: /laboratorio/forecast-101/
 ---
 
-Prever não é enxergar o futuro. É produzir uma estimativa condicionada ao que
-sabemos agora, para uma decisão que será tomada antes de conhecermos o resultado.
+Forecasting consiste em estimar valores futuros de uma variável a partir das
+informações disponíveis em uma origem de previsão. A definição é simples, mas
+impõe quatro condições que frequentemente desaparecem durante a modelagem: a
+origem deve ser explícita, o horizonte deve corresponder ao uso operacional, o
+conjunto de informação deve respeitar o que existia naquele instante e a
+avaliação deve representar a consequência do erro.
 
-Essa definição parece modesta — e é justamente por isso que ela é útil. Ela
-retira o forecast do território do oráculo e o coloca onde deveria estar: entre
-um problema, uma informação disponível, uma função de perda e uma ação.
+Este artigo examina essas condições em um experimento reproduzível de previsão
+de demanda diária. O exemplo usa dados sintéticos e um modelo deliberadamente
+simples. O interesse não está em maximizar desempenho em uma competição, mas em
+estabelecer um procedimento de avaliação que continue válido quando o modelo for
+levado para uma decisão real.
 
-Neste ensaio, vamos construir e revisar um experimento completo de previsão de
-demanda diária. O exemplo é sintético, o código é reproduzível e o modelo é
-deliberadamente simples. O objetivo não é vencer uma competição. É tornar
-visível o que precisa estar correto antes que a complexidade seja convidada para
-entrar.
-
-> **Em uma frase:** um forecast é uma afirmação sobre o futuro feita em uma
-> origem específica, para um horizonte específico, sob uma informação
-> específica e avaliada por uma consequência específica.
-
-## Resumo executivo
+## Visão geral do experimento
 
 O laboratório compara três métodos em oito origens móveis de previsão:
 
@@ -45,12 +41,11 @@ Na série sintética, a regressão apresentou o menor WAPE médio: **4,05%**, co
 subprevisão e custo assimétrico superior ao naive. Portanto, o modelo que mais
 acertou em erro absoluto não foi o que melhor serviu à decisão escolhida.
 
-Esse aparente paradoxo é a principal conclusão do exercício:
+O resultado não é paradoxal. Acurácia pontual e valor decisório são critérios
+distintos. A expressão “melhor forecast” só é tecnicamente completa quando
+declara a decisão, o custo e o horizonte aos quais se refere.
 
-> Não existe “melhor forecast” sem completar a frase: melhor para qual decisão,
-> sob qual custo e em qual horizonte?
-
-## 1. A previsão começa antes do modelo
+## 1. Formulação do problema
 
 “Prever vendas” não é uma formulação analítica completa. Vendas podem significar
 receita, unidades, pedidos ou demanda não censurada. Podem ser previstas para a
@@ -78,16 +73,14 @@ Uma especificação mínima deve declarar:
 | Decisão | Qual ação será alterada pelo resultado? |
 | Custo | O que acontece quando erramos para cima ou para baixo? |
 
-No laboratório, a formulação é:
-
-> Em uma série diária sintética, uma regressão de calendário produz previsões
-> de 28 dias mais úteis do que baselines simples quando avaliada em oito origens
-> temporais?
+No laboratório, a pergunta é se, em uma série diária sintética, uma regressão
+de calendário produz previsões de 28 dias mais úteis do que baselines simples
+quando avaliada em oito origens temporais.
 
 A palavra “úteis” exige mais do que acurácia. Por isso, mediremos também viés,
 estabilidade, calibração e custo.
 
-## 2. O conjunto de informação é parte do estimando
+## 2. Origem, horizonte e conjunto de informação
 
 Toda previsão é condicional:
 
@@ -116,11 +109,11 @@ Isso cria três classes úteis de atributos:
 Misturar essas classes produz um modelo que funciona no laboratório e não pode
 ser executado na operação.
 
-> **Erro comum:** avaliar com o clima futuro observado e depois afirmar que o
-> modelo usará “clima” em produção. O experimento mediu o valor da observação
-> perfeita, não o valor da previsão meteorológica realmente disponível.
+Se a avaliação usa o clima futuro observado e o modelo operacional receberá uma
+previsão meteorológica, o experimento mediu o valor da observação perfeita, não
+o valor da informação realmente disponível em produção.
 
-## 3. O tempo não é apenas uma coluna
+## 3. Série sintética e processo gerador
 
 Uma série temporal não é uma tabela que por acaso possui datas. A ordem carrega
 dependência. Tendência, sazonalidade, ciclos, eventos, intervenções e mudanças
@@ -180,8 +173,8 @@ A correção usa apenas a última semana disponível na origem:
 A semana conhecida é repetida recursivamente durante todo o horizonte. Nenhum
 valor realizado depois de \(T\) entra na previsão.
 
-> **Princípio de auditoria:** para cada linha prevista, pergunte qual era a data
-> de origem e prove que todas as entradas existiam naquela data.
+Uma auditoria temporal deve reconstruir, para cada linha prevista, a data de
+origem e a disponibilidade de todas as entradas usadas pelo modelo.
 
 ## 5. Baselines são hipóteses mínimas
 
@@ -350,11 +343,10 @@ O MASE de 0,83 é coerente com ganho sobre a escala sazonal. O viés de -2,53%,
 porém, mostra subprevisão persistente. A regressão captura a estrutura média,
 mas reage lentamente à mudança de nível que não foi explicitamente modelada.
 
-> **Conclusão sustentada:** neste experimento e nestas oito origens, a regressão
-> apresentou menor erro absoluto que os dois baselines.
-
-> **Conclusão não sustentada:** regressão de calendário é o melhor método para
-> demanda diária em geral.
+Os resultados sustentam uma conclusão restrita: neste experimento e nestas oito
+origens, a regressão apresentou menor erro absoluto que os dois baselines. Eles
+não sustentam a afirmação de que regressão de calendário seja o melhor método
+para demanda diária em geral.
 
 ## 9. O horizonte também é uma dimensão do erro
 
@@ -471,8 +463,8 @@ intervalo. Uma faixa extremamente larga cobriria quase tudo e ainda poderia ser
 inútil. O interval score combina largura com penalidade quando o observado fica
 fora da faixa.
 
-> **Erro comum:** comparar intervalos apenas por cobertura. Calibração sem
-> sharpness pode premiar incerteza inflada.
+Comparar intervalos apenas por cobertura é insuficiente. Calibração sem
+*sharpness* pode premiar incerteza inflada.
 
 ## 12. Resíduos: o que o modelo ainda não aprendeu
 
@@ -594,9 +586,8 @@ Depois disso, a implantação inicia outro experimento: desempenho prospectivo.
 Um modelo aprovado historicamente ainda precisa demonstrar que dados, latência
 e comportamento futuro permanecem compatíveis com o desenho.
 
-> **Regra prática:** diferenças pequenas e instáveis devem ser tratadas como
-> empate operacional até que exista evidência para justificar a complexidade
-> adicional.
+Diferenças pequenas e instáveis devem ser tratadas como empate operacional até
+que exista evidência para justificar a complexidade adicional.
 
 ## 15. Uma taxonomia útil de modelos
 
