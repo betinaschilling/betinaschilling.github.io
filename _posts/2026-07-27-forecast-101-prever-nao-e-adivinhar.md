@@ -5,6 +5,9 @@ description: "Um primeiro tutorial sobre previsão, backtesting e decisões de n
 date: 2026-07-27 12:00:00 -0300
 category: Método
 read_time: 12 min
+series: Forecast 101
+featured_order: 2
+laboratory: /laboratorio/forecast-101/
 ---
 
 Prever não é adivinhar o futuro. É construir uma estimativa sobre um alvo definido, em um horizonte definido, usando apenas a informação que estaria disponível no momento da decisão — e medir o quanto essa estimativa ajuda.
@@ -146,7 +149,10 @@ Também não há aqui uma análise de causalidade, experimento de intervenção 
 
 ## 12. Reproduza no laboratório
 
-O código completo está em [`laboratorios/forecast-101/`](https://github.com/betinaschilling/betinaschilling.github.io/tree/master/laboratorios/forecast-101). Ele documenta objetivo, entradas, processamento, saídas e interpretação, gera a figura deste artigo e usa a semente aleatória 42.
+O código completo está no [caderno técnico do Forecast 101]({{
+'/laboratorio/forecast-101/' | relative_url }}). Ele documenta objetivo,
+entradas, processamento, saídas e interpretação, gera a figura deste artigo e
+usa a semente aleatória 42.
 
 ```bash
 cd laboratorios/forecast-101

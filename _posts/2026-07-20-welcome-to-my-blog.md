@@ -5,6 +5,8 @@ description: "Uma apresentação, um ponto de partida e a dinâmica de um espaç
 date: 2026-07-24 12:00:00 -0300
 category: Abertura
 read_time: 7 min
+series: Fundação
+featured_order: 1
 ---
 
 Olá, sou Cheila.
@@ -14,6 +16,11 @@ Trabalho na interseção entre estatística, engenharia de dados, ciência de da
 Começam com uma pergunta. E toda pergunta carrega escolhas sobre o que merece ser observado, quais diferenças importam e o que faremos com a resposta.
 
 O **ComuniDados** nasce para tornar esse percurso visível.
+
+Seu nome reúne algumas ideias que não quero separar: o comum, a comunidade, a
+comunicação e a possibilidade de agir **com unidade, sem uniformidade**. O
+símbolo **C1D** condensa essa ambiguidade: pode ser lido como “C-um-D”, mas
+também como “se um dia” — uma abreviação de futuro.
 
 ## Por que este espaço existe
 
@@ -60,4 +67,9 @@ Democratizar dados costuma ser tratado como um problema de acesso: disponibiliza
 
 > Democratizar dados não é entregar números. É distribuir capacidade de interpretação.
 
-Este é o ponto de partida. O restante será construído pergunta por pergunta.
+Se um dia o conhecimento for comum, não será porque todos chegaram à mesma
+conclusão. Será porque mais pessoas puderam compreender as evidências,
+questionar as escolhas e participar das decisões.
+
+Este é o ponto de partida. O restante será construído pergunta por pergunta,
+com 1nidade e sem uniformidade.

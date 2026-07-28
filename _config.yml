@@ -10,6 +10,7 @@ exclude:
   - Gemfile
   - LICENSE
   - README.md
+  - docs/
   - vendor/
   - preview/
 plugins:
@@ -21,12 +22,10 @@ markdown: kramdown
 navigation:
   - title: "Início"
     url: "/"
-  - title: "Dossiês"
-    url: "/dossies/"
   - title: "Artigos"
     url: "/artigos/"
-  - title: "Investigações"
-    url: "/investigacoes/"
+  - title: "Laboratório"
+    url: "/laboratorio/"
   - title: "Manifesto"
     url: "/manifesto/"
   - title: "Sobre"

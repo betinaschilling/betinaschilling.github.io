@@ -8,11 +8,20 @@ Site pessoal e publicação editorial de Cheila Betina, construído com Jekyll e
 
 - `/` — página inicial
 - `/artigos/` — índice de publicações
-- `/dossies/` — linhas de investigação que surgirão com o conteúdo
-- `/investigacoes/` — ponte entre perguntas públicas e cadernos técnicos
+- `/laboratorio/` — cadernos técnicos reproduzíveis
 - `/manifesto/` — princípios editoriais
 - `/sobre/` — trajetória profissional e acadêmica
 - `/curriculo/` — página canônica do currículo
+- `/docs/` — identidade, ecossistema e padrão editorial
+- `/_templates/` — modelos que não são publicados pelo Jekyll
+
+## Documentos de referência
+
+- [`docs/BRAND.md`](docs/BRAND.md) — identidade, frases, voz e governança;
+- [`docs/ECOSSISTEMA.md`](docs/ECOSSISTEMA.md) — funções, fluxo e estados;
+- [`docs/PADRAO-EDITORIAL.md`](docs/PADRAO-EDITORIAL.md) — estrutura e gate;
+- [`_templates/artigo-tecnico.md`](_templates/artigo-tecnico.md) — ponto de
+  partida para novos artigos técnicos.
 
 ## Publicar um novo artigo
 
@@ -26,10 +35,14 @@ description: "Resumo para mecanismos de busca."
 date: 2026-07-20 12:00:00 -0300
 category: Método
 read_time: 8 min
+series: Nome da série
+laboratory: /laboratorio/nome/
 ---
 
 Texto do artigo em Markdown.
 ```
+
+Remova `laboratory` quando o texto não possuir um caderno técnico publicado.
 
 ## Executar localmente
 

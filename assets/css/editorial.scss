@@ -21,24 +21,26 @@
 .question-art i:nth-of-type(1){left:18%;box-shadow:36px -25px var(--ink),72px -8px var(--ink),108px -58px var(--ink)}
 .question-art i:nth-of-type(2){right:23%;box-shadow:-38px 20px var(--ink),38px -30px var(--ink)}
 .question-art i:nth-of-type(3){right:8%;bottom:50%}
-.opening-card{display:grid;grid-template-columns:minmax(180px,32%) 1fr;border-bottom:1px solid var(--line)}
-.opening-number{min-height:390px;display:grid;place-items:center;background-color:#e8dfca;background-image:linear-gradient(#17161218 1px,transparent 1px),linear-gradient(90deg,#17161218 1px,transparent 1px);background-size:30px 30px;color:var(--red);font:italic clamp(120px,15vw,220px)/1 Georgia}
-.opening-copy{padding:55px clamp(30px,6vw,95px);align-self:center}
-.opening-copy h2{max-width:780px;font:500 clamp(43px,5vw,76px)/.98 Georgia;letter-spacing:-.045em;margin:22px 0}
-.opening-copy>p:not(.meta){max-width:690px;font:19px/1.55 Georgia;color:var(--grey)}
+.publication-grid{display:grid;grid-template-columns:1fr 1fr}
+.publication-card{min-width:0;border-bottom:1px solid var(--line)}
+.publication-card:first-child{border-right:1px solid var(--line)}
+.publication-number{min-height:260px;display:grid;place-items:center;background-color:#e8dfca;background-image:linear-gradient(#17161218 1px,transparent 1px),linear-gradient(90deg,#17161218 1px,transparent 1px);background-size:30px 30px;color:var(--red);font:italic clamp(100px,12vw,180px)/1 Georgia}
+.publication-forecast .publication-number{background-color:var(--yellow);color:var(--ink)}
+.publication-copy{padding:42px clamp(25px,4vw,65px) 55px}
+.publication-copy h2{font:500 clamp(36px,4vw,58px)/1 Georgia;letter-spacing:-.04em;margin:20px 0}
+.publication-copy>p:not(.meta){max-width:620px;font:17px/1.55 Georgia;color:var(--grey)}
 .ecosystem{display:grid;grid-template-columns:38% 57%;gap:5%}
 .ecosystem-flow{list-style:none;margin:0;padding:0}
 .ecosystem-flow li{display:grid;grid-template-columns:50px 1fr;column-gap:24px;padding:29px 0;border-top:1px solid var(--line)}
 .ecosystem-flow li>b{grid-row:1/5;color:var(--red);font:italic 24px Georgia}
 .ecosystem-flow h3{font:500 clamp(27px,3vw,39px)/1.05 Georgia;margin:7px 0 11px}
 .ecosystem-flow li>p:last-child{max-width:610px;margin:0;color:var(--grey);font:15px/1.55 Georgia}
-.blank-slate{padding-bottom:120px}
-.blank-grid{display:grid;grid-template-columns:1fr 1fr}
-.blank-grid article{min-height:350px;padding:50px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.blank-grid article:first-child{padding-left:0}
-.blank-grid article:last-child{border-right:0}
-.blank-grid h2,.empty-state h2{max-width:650px;font:500 clamp(38px,4vw,61px)/1 Georgia;letter-spacing:-.035em;margin:24px 0}
-.blank-grid article>p:not(.eyebrow){max-width:570px;color:var(--grey);font:16px/1.55 Georgia}
+.laboratory-feature{display:grid;grid-template-columns:35% 1fr;border-bottom:1px solid var(--line)}
+.lab-mark{min-height:430px;display:grid;place-content:center;background:var(--red);color:var(--paper);font:italic clamp(110px,14vw,200px)/.62 Georgia;text-align:center}
+.lab-mark span{font:600 23px/1 monospace;letter-spacing:.25em;color:var(--yellow)}
+.laboratory-feature article{align-self:center;padding:55px clamp(35px,7vw,110px)}
+.laboratory-feature h2,.empty-state h2{max-width:720px;font:500 clamp(38px,4.5vw,67px)/.98 Georgia;letter-spacing:-.04em;margin:24px 0}
+.laboratory-feature article>p:not(.eyebrow){max-width:650px;color:var(--grey);font:18px/1.55 Georgia}
 .empty-state{max-width:930px;margin:45px 0 100px;padding:55px;border:1px solid var(--line);background:rgba(255,255,255,.12)}
 .empty-state p:not(.eyebrow){max-width:740px;font:18px/1.65 Georgia;color:var(--grey)}
 .empty-state a{color:var(--red);border-bottom:1px solid}
@@ -48,10 +50,12 @@
 }
 
 @media(max-width:680px){
-  .opening-card,.blank-grid{grid-template-columns:1fr}
-  .opening-number{min-height:230px}
-  .opening-copy{padding:38px 0}
-  .blank-grid article,.blank-grid article:first-child{padding:42px 0;border-right:0}
+  .publication-grid,.laboratory-feature{grid-template-columns:1fr}
+  .publication-card:first-child{border-right:0}
+  .publication-number{min-height:210px}
+  .publication-copy{padding:36px 0 48px}
+  .lab-mark{min-height:300px}
+  .laboratory-feature article{padding:45px 0}
   .empty-state{padding:30px 22px;margin-bottom:45px}
   .question-art>span{font-size:170px}
 }
@@ -93,3 +97,17 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset
   .document-meta div:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .document-followup{font-size:17px;margin-bottom:50px}
 }
+
+/* Forecast 101 — leitura técnica */
+.prose pre{max-width:100%;overflow-x:auto;padding:20px 22px;background:#e3d8c4;border-left:3px solid var(--red);font:14px/1.6 monospace}
+.prose pre code{padding:0;background:transparent}
+.prose table{width:100%;margin:30px 0 45px;border-collapse:collapse;font:15px/1.45 Arial,Helvetica,sans-serif}
+.prose th,.prose td{padding:13px 15px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.prose th{font:700 10px monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.article-figure{margin:55px calc(50% - 50vw);padding:40px max(4.2vw,calc((100vw - 1050px)/2));background:#e8dfca;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.article-figure img{display:block;width:100%;height:auto}
+.article-figure figcaption{margin-top:16px;font:12px/1.5 monospace;color:var(--grey)}
+.manifesto-lead{margin:0 0 55px;padding:28px 32px;background:var(--yellow);border-left:4px solid var(--red);font:600 clamp(25px,3vw,40px)/1.2 monospace!important;letter-spacing:-.03em;color:var(--ink)!important}
+.lab-status{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:700 10px/1.4 monospace;letter-spacing:.1em;color:var(--red)}
+.post-laboratory{max-width:850px;margin:20px auto 55px;padding:28px 32px;border-left:4px solid var(--red);background:#e8dfca}
+.post-laboratory p{margin:6px 0;font:17px/1.5 Georgia;color:var(--grey)}

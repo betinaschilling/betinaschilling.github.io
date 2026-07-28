@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-{% assign opening_post = site.posts | first %}
+{% assign opening_post = site.posts | where: "series", "Fundação" | first %}
+{% assign forecast_post = site.posts | where: "series", "Forecast 101" | first %}
 
 <section class="hero hero-opening">
   <aside class="folio"><span>CADERNO 01</span><b>01</b></aside>
 
   <div class="hero-copy">
-    <p class="eyebrow">Caderno de abertura —</p>
+    <p class="eyebrow">C1D · Caderno de abertura —</p>
     <h1>Compreender<br>dados é uma forma<br>de <em>participar.</em></h1>
     <p class="hero-deck">Perguntas sobre dados, inteligência artificial, decisões e a sociedade que construímos com eles.</p>
     {% if opening_post %}
@@ -16,9 +17,9 @@ layout: default
   </div>
 
   <div class="hero-visual" role="img" aria-label="Caderno editorial sobre perguntas, evidências e interpretação">
-    <div class="note">DADOS NÃO FALAM.<br>SÃO INTERPRETADOS.<br>E TODA INTERPRETAÇÃO<br>COMEÇA COM UMA PERGUNTA.</div>
+    <div class="note">C1D É UMA<br>ABREVIAÇÃO<br>DE FUTURO.</div>
     <span class="annotation annotation-a">o contexto<br>muda tudo ↙</span>
-    <span class="annotation annotation-b">perguntar também<br>é participar ←</span>
+    <span class="annotation annotation-b">se um dia o conhecimento<br>for comum ←</span>
     <div class="question-art" aria-hidden="true">
       <span>?</span>
       <i></i><i></i><i></i>
@@ -26,50 +27,75 @@ layout: default
   </div>
 </section>
 
-<section class="home-section opening-publication">
+<section class="home-section featured-publications">
   <div class="section-label">
-    <span>PRIMEIRA PUBLICAÇÃO</span>
-    <span>CADERNO 01 · ABERTURA</span>
+    <span>PUBLICAÇÕES EM DESTAQUE</span>
+    <a href="{{ '/artigos/' | relative_url }}">VER TODOS →</a>
   </div>
 
-  {% if opening_post %}
-  <article class="opening-card">
-    <div class="opening-number" aria-hidden="true">01</div>
-    <div class="opening-copy">
-      <p class="meta">{{ opening_post.category | default: 'Abertura' }} · {{ opening_post.date | date: '%d.%m.%Y' }} · {{ opening_post.read_time | default: '6 min' }}</p>
-      <h2><a href="{{ opening_post.url | relative_url }}">{{ opening_post.title }}</a></h2>
-      <p>{{ opening_post.description }}</p>
-      <a class="read-link" href="{{ opening_post.url | relative_url }}">Ler o texto de abertura →</a>
-    </div>
-  </article>
-  {% endif %}
+  <div class="publication-grid">
+    {% if opening_post %}
+    <article class="publication-card publication-opening">
+      <div class="publication-number" aria-hidden="true">01</div>
+      <div class="publication-copy">
+        <p class="meta">{{ opening_post.category }} · {{ opening_post.read_time }}</p>
+        <h2><a href="{{ opening_post.url | relative_url }}">{{ opening_post.title }}</a></h2>
+        <p>{{ opening_post.description }}</p>
+        <a class="read-link" href="{{ opening_post.url | relative_url }}">Ler abertura →</a>
+      </div>
+    </article>
+    {% endif %}
+    {% if forecast_post %}
+    <article class="publication-card publication-forecast">
+      <div class="publication-number" aria-hidden="true">02</div>
+      <div class="publication-copy">
+        <p class="meta">{{ forecast_post.category }} · {{ forecast_post.read_time }}</p>
+        <h2><a href="{{ forecast_post.url | relative_url }}">{{ forecast_post.title }}</a></h2>
+        <p>{{ forecast_post.description }}</p>
+        <a class="read-link" href="{{ forecast_post.url | relative_url }}">Ler tutorial →</a>
+      </div>
+    </article>
+    {% endif %}
+  </div>
 </section>
 
 <section id="como-funciona" class="home-section ecosystem">
   <div class="section-intro">
     <p class="eyebrow">Como o ecossistema funciona —</p>
-    <h2>Da pergunta<br>ao método.<br><em>Do método à conversa.</em></h2>
-    <p>O ComuniDados formula e interpreta. O GitHub documenta a investigação técnica. O Workbench sustenta o método.</p>
+    <h2>Da pergunta<br>à evidência.<br><em>Da evidência à decisão.</em></h2>
+    <p>O ComuniDados formula e interpreta. O laboratório demonstra. O GitHub preserva a investigação técnica. O feedback inicia uma pergunta melhor.</p>
   </div>
 
   <ol class="ecosystem-flow">
     <li>
       <b>01</b>
-      <p class="meta">COMUNIDADOS</p>
-      <h3>A pergunta surge</h3>
-      <p>Um problema, uma tensão ou uma curiosidade ganha contexto e se torna investigável.</p>
+      <p class="meta">PROBLEMA</p>
+      <h3>A pergunta ganha forma</h3>
+      <p>Uma tensão ou necessidade é ligada a uma decisão, uma população e um critério verificável.</p>
     </li>
     <li>
       <b>02</b>
-      <p class="meta">CADERNO TÉCNICO</p>
-      <h3>A pergunta é testada</h3>
-      <p>Dados, código, métodos, resultados e limitações ficam documentados no GitHub.</p>
+      <p class="meta">DADOS CONFIÁVEIS</p>
+      <h3>A realidade é auditada</h3>
+      <p>Significado, cobertura, qualidade e linhagem são examinados antes de qualquer modelo.</p>
     </li>
     <li>
       <b>03</b>
-      <p class="meta">COMUNIDADOS</p>
-      <h3>A evidência retorna</h3>
-      <p>Os achados voltam como interpretação, implicações e perguntas melhores.</p>
+      <p class="meta">MODELOS E INFERÊNCIA</p>
+      <h3>O método encontra a pergunta</h3>
+      <p>Baselines, pressupostos e técnicas são escolhidos pelo que precisam sustentar.</p>
+    </li>
+    <li>
+      <b>04</b>
+      <p class="meta">EVIDÊNCIAS</p>
+      <h3>O resultado enfrenta seus limites</h3>
+      <p>Magnitude, incerteza, estabilidade e contradições são registradas de forma auditável.</p>
+    </li>
+    <li>
+      <b>05</b>
+      <p class="meta">DECISÃO · FEEDBACK</p>
+      <h3>A evidência retorna ao mundo</h3>
+      <p>Implicações proporcionais são propostas, consequências observadas e novas perguntas formuladas.</p>
     </li>
   </ol>
   <aside class="workbench-layer">
@@ -78,36 +104,31 @@ layout: default
   </aside>
 </section>
 
-<section class="home-section blank-slate">
+<section class="home-section laboratory-callout">
   <div class="section-label">
-    <span>PRÓXIMOS CADERNOS</span>
-    <span>AINDA EM BRANCO — DE PROPÓSITO</span>
+    <span>LABORATÓRIO 01</span>
+    <span>EXECUTADO · REPRODUZÍVEL</span>
   </div>
 
-  <div class="blank-grid">
+  <div class="laboratory-feature">
+    <div class="lab-mark" aria-hidden="true">F<br><span>101</span></div>
     <article>
-      <p class="eyebrow">Dossiês —</p>
-      <h2>As linhas de investigação ainda serão abertas.</h2>
-      <p>Os dossiês aparecerão quando houver perguntas suficientes para formar um território comum.</p>
-      <a class="read-link" href="{{ '/dossies/' | relative_url }}">Ver o espaço reservado →</a>
-    </article>
-    <article>
-      <p class="eyebrow">Investigações —</p>
-      <h2>Nenhum resultado antes da pergunta.</h2>
-      <p>Projetos serão publicados somente quando problema, método e limites puderem ser apresentados com clareza.</p>
-      <a class="read-link" href="{{ '/investigacoes/' | relative_url }}">Ver o espaço reservado →</a>
+      <p class="eyebrow">Séries temporais —</p>
+      <h2>Forecast começa com uma decisão, não com um algoritmo.</h2>
+      <p>O primeiro caderno técnico compara baseline e regressão em backtesting, mede direção do erro e torna a incerteza explícita.</p>
+      <a class="button dark" href="{{ '/laboratorio/forecast-101/' | relative_url }}">Abrir laboratório <span>→</span></a>
     </article>
   </div>
 </section>
 
 <section class="manifesto-teaser">
   <div>
-    <span>PRINCÍPIO / 01</span>
-    <h2>O código fica aberto. A interpretação também.</h2>
+    <span>MANIFESTO / C1D</span>
+    <h2>Se um dia o conhecimento for comum.</h2>
   </div>
   <div>
-    <p class="lead">Este espaço começa pequeno porque ainda está começando.</p>
-    <p>Sem projetos cenográficos, artigos inexistentes ou conclusões antecipadas. O arquivo crescerá junto com as perguntas e com o trabalho necessário para respondê-las.</p>
-    <a href="{{ '/manifesto/' | relative_url }}">Conhecer os princípios editoriais →</a>
+    <p class="lead">Com 1nidade, sem uniformidade.</p>
+    <p>O comum não exige uma conclusão única. Exige condições para compreender as evidências, questionar as escolhas e participar das decisões.</p>
+    <a href="{{ '/manifesto/' | relative_url }}">Ler o manifesto →</a>
   </div>
 </section>
