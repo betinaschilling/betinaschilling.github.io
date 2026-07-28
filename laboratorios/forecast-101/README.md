@@ -1,26 +1,53 @@
-# Forecast 101: prever não é adivinhar
+# Forecast 101 — laboratório reproduzível
 
-Laboratório didático para o artigo [Forecast 101: prever não é adivinhar](/2026/07/27/forecast-101-prever-nao-e-adivinhar/).
+Laboratório técnico do artigo “Forecast 101: prever não é adivinhar”.
 
-## O que existe aqui
+## O que ele demonstra
 
-`forecast_101.py` gera uma demanda diária sintética e reproduz um backtest com três folds, janela expansiva e horizonte de 28 dias. A série tem tendência, sazonalidade semanal, ciclo anual e ruído. Ela não representa uma empresa, mercado ou processo real.
+- origem móvel com oito folds e horizonte de 28 dias;
+- baselines naive e seasonal naive sem acesso ao teste;
+- regressão de calendário deliberadamente interpretável;
+- MAE, RMSE, WAPE, viés, MASE e custo assimétrico;
+- erro por fold e bloco de horizonte;
+- intervalo de 80% com calibração temporal;
+- cobertura, largura, interval score e autocorrelação dos erros.
 
-O experimento compara:
+## Dados
 
-- `seasonal naive`, que repete o valor de sete dias atrás;
-- regressão linear de calendário, com tendência, dia da semana, seno e cosseno anuais.
+A série é sintética e reproduzível. Contém tendência, sazonalidade semanal,
+ciclo anual, ruído, eventos pontuais e mudança de nível. Eventos e mudança não
+entram no candidato para permitir diagnóstico de especificação incompleta.
 
-O script calcula MAE, WAPE, viés e cobertura de um intervalo empírico de 80%. Também escreve `assets/images/forecast-101-backtest.svg`, a figura usada no artigo.
+Não há empresa, mercado ou processo real representado.
 
 ## Executar
+
+Requer apenas Python 3.10 ou superior:
 
 ```bash
 python3 forecast_101.py
 ```
 
-O resultado deve ser idêntico entre execuções. Não há dados externos nem arquivos de entrada; a semente é fixada em `42`. O código usa somente a biblioteca padrão do Python.
+O script imprime todas as métricas usadas no artigo e atualiza
+`assets/images/forecast-101-backtest.svg`.
 
-## Limites
+Execute também os testes de segurança metodológica:
 
-O objetivo é explicar o desenho de uma avaliação, não produzir uma previsão operacional. A demanda é sintética, a regressão é intencionalmente simples, o intervalo é empírico e não há tratamento de feriados, mudanças de regime, dados faltantes ou custos de decisão. Nenhum resultado deve ser interpretado como causalidade ou como prontidão para produção.
+```bash
+python3 -m unittest test_forecast_101.py
+```
+
+## Convenções
+
+- erro = previsão − observado;
+- viés negativo = subprevisão;
+- custo de falta = 3;
+- custo de excesso = 1;
+- o seasonal naive repete somente a última semana disponível na origem;
+- resultados são preditivos, não causais.
+
+## Revisão
+
+O parecer independente está em [`REVIEW.md`](REVIEW.md). A versão anterior
+continha leakage no baseline sazonal; os números antigos foram invalidados e
+substituídos após correção e reteste.
